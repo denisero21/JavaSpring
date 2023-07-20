@@ -30,8 +30,8 @@ public class RestaurantServiceImpl implements RestaurantService {
         }
 
         // Update the fields of the existing restaurant with the new values
-        existingRestaurant.setName(restaurant.getName());
-        existingRestaurant.setDishesList(restaurant.getDishesList());
+//        existingRestaurant.setName(restaurant.getName());
+//        existingRestaurant.setDishesList(restaurant.getDishesList());
 
         // Save the updated restaurant
         return restaurantRepository.save(existingRestaurant);

@@ -16,7 +16,6 @@ public class Dish {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @ManyToOne
     @JoinColumn(name = "restaurant_id")
     private String name;
 
