@@ -1,7 +1,7 @@
-package com.example.service;
+package by.softclub.service;
 
-import com.example.entity.Restaurant;
-import com.example.repository.RestaurantRepository;
+import by.softclub.entity.Restaurant;
+import by.softclub.repository.RestaurantRepository;
 import org.springframework.data.crossstore.ChangeSetPersister;
 
 import java.util.List;

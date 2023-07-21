@@ -1,6 +1,6 @@
-package com.example.service;
+package by.softclub.service;
 
-import com.example.entity.Restaurant;
+import by.softclub.entity.Restaurant;
 
 import java.util.List;
 

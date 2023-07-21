@@ -1,17 +1,10 @@
 ### add notification
-POST http://localhost:8091/api/notifications
+POST http://localhost:8080/restaurants
 Content-Type: application/json
 
 {
-  "agents": [2],
-  "notification_name": "New Notification 4",
-  "priority": 2,
-  "notification_text": "This is a new notification",
-  "admin_full_name": "John Doe",
-  "is_broadcast_notification": false,
-  "is_periodic_notification": true,
-  "period_type": 1,
-  "is_blocked": false
+  "name": "keks",
+  "dishes": "haha"
 }
 
 ###update notification
