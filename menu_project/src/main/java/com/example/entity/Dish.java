@@ -16,7 +16,6 @@ public class Dish {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @JoinColumn(name = "restaurant_id")
     private String name;
 
     private int cost;
