@@ -23,7 +23,7 @@ public class RestaurantController {
 
     @PostMapping
     public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurant) {
-        Restaurant savedRestaurant = restaurantRepository.save(restaurant);
+        Restaurant savedRestaurant = restaurantService.addRestaurant(restaurant);
         return ResponseEntity.ok(savedRestaurant);
     }
 
