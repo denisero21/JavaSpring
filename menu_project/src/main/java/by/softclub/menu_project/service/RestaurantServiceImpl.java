@@ -1,7 +1,7 @@
-package by.softclub.service;
+package by.softclub.menu_project.service;
 
-import by.softclub.entity.Restaurant;
-import by.softclub.repository.RestaurantRepository;
+import by.softclub.menu_project.entity.Restaurant;
+import by.softclub.menu_project.repository.RestaurantRepository;
 import org.springframework.data.crossstore.ChangeSetPersister;
 
 import java.util.List;

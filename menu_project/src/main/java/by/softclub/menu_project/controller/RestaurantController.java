@@ -1,7 +1,7 @@
-package by.softclub.controller;
+package by.softclub.menu_project.controller;
 
-import by.softclub.entity.Restaurant;
-import by.softclub.repository.RestaurantRepository;
+import by.softclub.menu_project.entity.Restaurant;
+import by.softclub.menu_project.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

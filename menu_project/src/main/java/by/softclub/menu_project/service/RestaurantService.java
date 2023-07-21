@@ -1,6 +1,6 @@
-package by.softclub.service;
+package by.softclub.menu_project.service;
 
-import by.softclub.entity.Restaurant;
+import by.softclub.menu_project.entity.Restaurant;
 
 import java.util.List;
 

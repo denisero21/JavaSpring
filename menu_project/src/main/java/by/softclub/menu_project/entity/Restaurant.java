@@ -1,4 +1,4 @@
-package by.softclub.entity;
+package by.softclub.menu_project.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
