@@ -4,6 +4,7 @@ import by.softclub.menu_project.entity.Restaurant;
 import by.softclub.menu_project.repository.RestaurantRepository;
 import by.softclub.menu_project.service.RestaurantServiceImpl;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -19,31 +20,18 @@ import java.util.Optional;
 @RequestMapping("/restaurants")
 @RequiredArgsConstructor
 public class RestaurantController {
-
-    private final RestaurantRepository restaurantRepository;
+    
     private final RestaurantServiceImpl restaurantService;
 
-
-//    @PostMapping("/add")
-//    public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurant) {
-//        Restaurant savedRestaurant = restaurantService.addRestaurant(restaurant);
-//        return ResponseEntity.ok(savedRestaurant);
-//    }
-
-    
-    @PostMapping("/addRest")
-    public String addRestaurant(@Valid Restaurant rest, BindingResult result, Model model){
-        if(result.hasErrors()){
-            return "add-rest";
-        }
-        restaurantService.addRestaurant(rest);
-        return "redirect:/index";
+    @PostMapping("/add")
+    public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurant) {
+        Restaurant savedRestaurant = restaurantService.addRestaurant(restaurant);
+        return ResponseEntity.ok(savedRestaurant);
     }
 
-    @GetMapping
-    public String getAllRestaurants(Model model){
-        model.addAttribute("restaurants", restaurantService.getRestaurants());
-        return "index";
+    @GetMapping("/all")
+    public List<Restaurant> getAllRestaurants() {
+        return restaurantService.getRestaurants();
     }
 
     @GetMapping("/get/{id}")
@@ -51,13 +39,10 @@ public class RestaurantController {
         return restaurantService.getRestaurant(id);
     }
 
-    @PutMapping("/update/{id}")
-    public String updateRestaurant(@PathVariable("id") Long id, Model model) {
-        Restaurant rest = restaurantService.getRestaurant(id)
-                .orElseThrow(() -> new IllegalArgumentException("invalid user ID: " + id));
-
-        model.addAttribute("restaurant", rest);
-        return "update-user";
+    @PutMapping("/update/{restId}")
+    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant, @PathVariable Long restId) {
+        Restaurant updatedRestaurant = restaurantService.updateRestaurant(restaurant, restId);
+        return ResponseEntity.ok(updatedRestaurant);
     }
 
     @DeleteMapping("/delete/{id}")

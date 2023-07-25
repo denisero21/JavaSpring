@@ -18,6 +18,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         this.restaurantRepository = restaurantRepository;
     }
 
+
     @Override
     public Restaurant addRestaurant(Restaurant restaurant) {
         return restaurantRepository.save(restaurant);
@@ -28,6 +29,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         return (List<Restaurant>)restaurantRepository.findAll();
     }
 
+    @Override
     public Optional<Restaurant> getRestaurant(Long id) {
         return restaurantRepository.findById(id);
     }
@@ -37,7 +39,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         Restaurant existingRestaurant = null;
         try {
             existingRestaurant = restaurantRepository.findById(restId)
-                    .orElseThrow(() -> new ChangeSetPersister.NotFoundException());
+                    .orElseThrow(ChangeSetPersister.NotFoundException::new);
         } catch (ChangeSetPersister.NotFoundException e) {
             throw new RuntimeException(e);
         }

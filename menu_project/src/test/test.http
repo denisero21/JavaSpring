@@ -1,26 +1,57 @@
+## RESTAURANTS
 ### add restaurant
-POST http://localhost:8080/restaurants
+POST http://localhost:8080/restaurants/add
 Content-Type: application/json
 
 {
-  "name": "keks",
-  "dishes": "haha"
+  "name": "keks"
 }
 
 ### get all restaurants
 GET http://localhost:8080/restaurants/all
 
 ### get restaurant by id
-GET http://localhost:8080/restaurants/6
+GET http://localhost:8080/restaurants/get/3
 
 ###
-DELETE http://localhost:8080/restaurants/1
+DELETE http://localhost:8080/restaurants/delete/1
 
-###
-PUT http://localhost:8080/restaurants/3
+### update restaurant
+PUT http://localhost:8080/restaurants/update/3
 Content-Type: application/json
 
 {
-  "name": "keksksks",
-  "dishes": "haha"
+  "name": "keksksks"
 }
+
+### add dish
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+
+{
+  "rest_id": 1,
+  "name": "Pasta",
+  "cost": 12
+}
+
+### get all dishes
+GET http://localhost:8080/dishes/all
+
+### get dish by id
+GET http://localhost:8080/dishes/get/1
+
+###
+DELETE http://localhost:8080/dishes/delete/1
+
+### update dish
+PUT http://localhost:8080/dishes/update/1
+Content-Type: application/json
+
+{
+  "name": "Pastaa",
+  "cost": 12
+}
+
+###
+DELETE http://localhost:8080/dishes/delete/1
