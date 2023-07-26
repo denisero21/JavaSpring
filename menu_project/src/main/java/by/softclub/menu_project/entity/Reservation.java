@@ -19,7 +19,7 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "reservation_id")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "date")
@@ -36,9 +36,6 @@ public class Reservation {
     @JsonIgnore
     private User user;
 
-    @OneToOne
-    private Order order;
-
     @ManyToOne
-    private Table table;
+    private RestaurantTable table;
 }

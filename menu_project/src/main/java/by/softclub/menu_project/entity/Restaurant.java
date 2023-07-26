@@ -1,6 +1,7 @@
 package by.softclub.menu_project.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Table;
 import lombok.*;
 
 import java.util.List;
@@ -8,12 +9,13 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@Table(name = "restaurant")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "rest_id")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")
@@ -28,4 +30,6 @@ public class Restaurant {
     @Column(name = "info")
     private String info;
 
+    @OneToMany(mappedBy = "restaurant")
+    private List<Dish> dishes;
 }

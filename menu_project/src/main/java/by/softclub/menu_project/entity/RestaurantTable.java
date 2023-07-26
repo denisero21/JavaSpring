@@ -11,13 +11,14 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@Table(name = "restaurant_table")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Table {
+public class RestaurantTable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "table_id")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "number")
