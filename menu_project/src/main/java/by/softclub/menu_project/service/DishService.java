@@ -33,24 +33,21 @@ public class DishService {
     }
 
 
-    public Dish updateDish(Dish dish, Long restId){
-        Dish existingDish = null;
-        try {
-            existingDish = dishRepository.findById(restId)
-                    .orElseThrow(ChangeSetPersister.NotFoundException::new);
-        } catch (ChangeSetPersister.NotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-        // Update the fields of the existing restaurant with the new values
-
-        existingDish.setName(dish.getName());
-        existingDish.setCost(dish.getCost());
-        existingDish.setRestaurant(dish.getRestaurant());
-
-        // Save the updated restaurant
-        return dishRepository.save(existingDish);
-    }
+//    public Dish updateDish(Dish dish, Long id){
+//        Dish existingDish = null;
+//        try {
+//            existingDish = dishRepository.findById(id)
+//                    .orElseThrow(ChangeSetPersister.NotFoundException::new);
+//        } catch (ChangeSetPersister.NotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        existingDish.setName(dish.getName());
+//        existingDish.setCost(dish.getCost());
+//        existingDish.setRestaurant(dish.getRestaurant());
+//
+//        return dishRepository.save(existingDish);
+//    }
 
 
     public void deleteDish(Long restId) {

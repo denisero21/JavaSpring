@@ -1,31 +1,28 @@
 package by.softclub.menu_project.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class Restaurant {
+@AllArgsConstructor
+public class MenuCategory {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "rest_id")
+    @Column(name = "category_id")
     private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "phone")
-    private String phone;
-
-    @Column(name = "address")
-    private String address;
-
-    @Column(name = "info")
-    private String info;
-
+    @OneToMany(mappedBy = "category")
+    private List<Dish> dishes;
 }

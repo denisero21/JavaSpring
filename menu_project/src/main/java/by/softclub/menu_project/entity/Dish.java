@@ -7,32 +7,33 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
-@Table(name = "dish")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Dish {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "dish_id")
     private long id;
 
-    @ManyToOne
-    @JoinColumn(name = "rest_id", nullable = false)
+    @ManyToMany
+    @JoinColumn(name = "category_id", nullable = false)
     @JsonIgnore
-    private Restaurant restaurant;
+    private List<MenuCategory> category;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    @JsonIgnore
+    private Order order;
 
     @Column(name = "name")
     private String name;
 
     @Column(name = "cost")
     private Integer cost;
-
-    public Dish(Restaurant restaurant, String name, Integer cost) {
-        this.restaurant = restaurant;
-        this.name = name;
-        this.cost = cost;
-    }
 }

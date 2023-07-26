@@ -22,14 +22,15 @@ public class DishController {
     private final DishService dishService;
     private final RestaurantService restaurantService;
 
-    @PostMapping("/add")
-    public ResponseEntity<Dish> addDish(@RequestBody DishDto dish) {
-        Dish newDish = new Dish(restaurantService
-                .getRestaurant(dish.getRestId()).get(), dish.getName(), dish.getCost());
-//        System.out.println(newDish.getName() + "\n" + newDish.getCost() + "\n" + newDish.getRestaurant().getName());
-        dishService.addDish(newDish);
-        return ResponseEntity.ok(newDish);
-    }
+//    @PostMapping("/add")
+//    public ResponseEntity<Dish> addDish(@RequestBody DishDto dish) {
+//        Dish newDish = new Dish(
+//                restaurantService.getRestaurant(dish.getRestId()).get(),
+//                dish.getName(), dish.getCost());
+////        System.out.println(newDish.getName() + "\n" + newDish.getCost() + "\n" + newDish.getRestaurant().getName());
+//        dishService.addDish(newDish);
+//        return ResponseEntity.ok(newDish);
+//    }
 
     @GetMapping("/all")
     public List<Dish> getAllDishes(){
@@ -40,16 +41,16 @@ public class DishController {
     public Optional<Dish> getDish(@PathVariable("id") Long id){
         return dishService.getDish(id);
     }
-
-
-    // TODO исправить реализацию апдейта, статус 404
-    @PutMapping("/upadte/{id}")
-    public ResponseEntity<Dish> updateDish(@RequestBody DishDto dish, @PathVariable("id") Long id){
-        Dish updDish = new Dish(restaurantService
-                .getRestaurant(dish.getRestId()).get(), dish.getName(), dish.getCost());
-                dishService.updateDish(updDish, id);
-        return ResponseEntity.ok(updDish);
-    }
+    
+//    @PutMapping("/update/{id}")
+//    public ResponseEntity<Dish> updateDish(@RequestBody DishDto dish, @PathVariable("id") Long id) {
+//        Dish updDish = new Dish(
+//                restaurantService.getRestaurant(dish.getRestId()).get(),
+//                dish.getName(), dish.getCost());
+//
+//        Dish updatedDish = dishService.updateDish(updDish, id);
+//        return ResponseEntity.ok(updatedDish);
+//    }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteDish(@PathVariable("id") Long dishId){
