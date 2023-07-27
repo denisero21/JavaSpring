@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -29,6 +30,8 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    private LocalDateTime creationDate;
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",

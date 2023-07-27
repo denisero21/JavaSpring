@@ -3,7 +3,8 @@ CREATE TABLE user_
     id              BIGSERIAL PRIMARY KEY,
     name            VARCHAR(200),
     mail           VARCHAR(255)            NOT NULL,
-    password        VARCHAR(60)            NOT NULL
+    password        VARCHAR(60)            NOT NULL,
+    creation_date TIMESTAMP DEFAULT now() NOT NULL
 );
 
 CREATE UNIQUE INDEX users_unique_email_idx ON user_ (mail);
@@ -11,8 +12,7 @@ CREATE UNIQUE INDEX users_unique_email_idx ON user_ (mail);
 CREATE TABLE role_
 (
     id            BIGSERIAL PRIMARY KEY,
-    name          VARCHAR(120),
-    creation_date TIMESTAMP DEFAULT now() NOT NULL
+    name          VARCHAR(120)
 );
 
 CREATE UNIQUE INDEX users_role_idx ON role_ (name);

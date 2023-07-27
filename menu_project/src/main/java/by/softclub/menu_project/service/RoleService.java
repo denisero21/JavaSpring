@@ -10,6 +10,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -23,10 +24,22 @@ public class RoleService {
     public void addRole(RoleDto roleDto){
 
         Role role = new Role();
-        role.setCreationDate(LocalDateTime.now());
         BeanUtils.copyProperties(roleDto, role, "rolePrivileges");
         Set<RolePrivilege> privileges = rolePrivilegeRepository.findAllByIds(roleDto.getRolePrivileges());
         role.setRolePrivileges(privileges);
         roleRepository.save(role);
     }
+
+    public Role getRole(Long id){
+        return roleRepository.findById(id).orElseThrow(() -> new RuntimeException("Role not found"));
+    }
+
+    public List<Role> getRoles(){
+        return roleRepository.findAll();
+    }
+
+//    public Role updateRole(RoleDto roleDto, Long id){
+//        Role role = new Role();
+//
+//    }
 }

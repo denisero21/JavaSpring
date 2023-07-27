@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -21,6 +23,7 @@ public class UserService {
 
     public void addUser(UserDto userDto){
         User newUser = new User();
+        newUser.setCreationDate(LocalDateTime.now());
         BeanUtils.copyProperties(userDto, newUser, "roles");
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         newUser.setRoles(roles);
@@ -29,5 +32,22 @@ public class UserService {
 
     public User getUser(Long id){
         return userRepository.findById(id).orElseThrow(() ->  new RuntimeException("User not found"));
+    }
+
+    public List<User> getUsers(){
+        return userRepository.findAll();
+    }
+
+    public User updateUser(UserDto userDto, Long id){
+        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        BeanUtils.copyProperties(userDto, user, "roles", "creation_date");
+        user.setCreationDate(LocalDateTime.now());
+        Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
+        user.setRoles(roles);
+        return user;
+    }
+
+    public void deleteUser(Long id){
+        userRepository.deleteById(id);
     }
 }

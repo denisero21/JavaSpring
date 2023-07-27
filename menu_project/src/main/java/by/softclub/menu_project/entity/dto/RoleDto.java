@@ -13,7 +13,5 @@ public class RoleDto {
 
     private String name;
 
-    private LocalDateTime creationDate;
-
     Set<Long> rolePrivileges;
 }

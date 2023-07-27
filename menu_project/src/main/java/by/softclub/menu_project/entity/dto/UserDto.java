@@ -2,6 +2,7 @@ package by.softclub.menu_project.entity.dto;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Data
@@ -13,6 +14,8 @@ public class UserDto {
     private String mail;
 
     private String password;
+
+    private LocalDateTime creationDate;
 
     private Set<Long> roles;
 }

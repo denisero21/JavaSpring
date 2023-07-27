@@ -24,8 +24,6 @@ public class Role {
     @Column(name = "name")
     private String name;
 
-    private LocalDateTime creationDate;
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "role_privilege",
             joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"),
