@@ -36,5 +36,9 @@ public class Dish {
     @ManyToOne
     private MenuCategory menuCategory;
 
+    @ManyToOne
+    private Order order;
+
+
 
 }

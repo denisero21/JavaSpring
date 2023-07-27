@@ -47,7 +47,10 @@ CREATE TABLE IF NOT EXISTS restaurant (
     info varchar(255) NOT NULL
 );
 
-drop table dish;
+CREATE TABLE IF NOT EXISTS menu_category (
+ id BIGSERIAL PRIMARY KEY,
+ name varchar(255) NOT NULL
+);
 
 CREATE TABLE IF NOT EXISTS dish (
   id BIGSERIAL PRIMARY KEY,
@@ -59,7 +62,3 @@ CREATE TABLE IF NOT EXISTS dish (
     FOREIGN KEY (menu_category_id) REFERENCES menu_category (id)
 );
 
-CREATE TABLE IF NOT EXISTS menu_category (
-    id BIGSERIAL PRIMARY KEY,
-    name varchar(255) NOT NULL
-);

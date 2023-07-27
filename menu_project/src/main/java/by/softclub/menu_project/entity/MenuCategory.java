@@ -27,7 +27,7 @@ public class MenuCategory {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "menuCategory")
     @JsonIgnore
     private List<Dish> dishes;
 }

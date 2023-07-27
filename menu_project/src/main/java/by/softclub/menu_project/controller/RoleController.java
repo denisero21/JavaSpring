@@ -1,5 +1,6 @@
 package by.softclub.menu_project.controller;
 
+import by.softclub.menu_project.entity.dto.RoleDto;
 import by.softclub.menu_project.entity.user.Role;
 import by.softclub.menu_project.service.RoleService;
 import lombok.RequiredArgsConstructor;
@@ -15,8 +16,8 @@ public class RoleController {
     private final RoleService roleService;
 
     @PostMapping("role/add")
-    public ResponseEntity<Void> addRole(@RequestBody Role role){
-        roleService.addRole(role);
+    public ResponseEntity<Void> addRole(@RequestBody RoleDto roleDto){
+        roleService.addRole(roleDto);
         return ResponseEntity.ok().build();
     }
 }

@@ -15,8 +15,8 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/add")
-    public ResponseEntity<Void> addUser(@RequestBody UserDto user){
-        userService.addUser(user);
+    public ResponseEntity<Void> addUser(@RequestBody UserDto userDto){
+        userService.addUser(userDto);
         return ResponseEntity.ok().build();
     }
 
