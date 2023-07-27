@@ -23,9 +23,9 @@ public class UserService {
 
     public void addUser(UserDto userDto){
         User newUser = new User();
-        newUser.setCreationDate(LocalDateTime.now());
         BeanUtils.copyProperties(userDto, newUser, "roles");
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
+        newUser.setCreationDate(LocalDateTime.now());
         newUser.setRoles(roles);
         userRepository.save(newUser);
     }
@@ -40,7 +40,7 @@ public class UserService {
 
     public User updateUser(UserDto userDto, Long id){
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-        BeanUtils.copyProperties(userDto, user, "roles", "creation_date");
+        BeanUtils.copyProperties(userDto, user, "roles", "creationDate");
         user.setCreationDate(LocalDateTime.now());
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setRoles(roles);

@@ -6,16 +6,34 @@ Content-Type: application/json
   "name": "ADMIN"
 }
 
-###
+
+### add user
 POST http://localhost:8080/users/add
 Content-Type: application/json
 
 {
-"name": "John Doe",
-"mail": "johndoe@example.com",
-"password": "password123",
+"name": "Roy Kent",
+"mail": "roykent@tedlasso.com",
+"password": "royroyroy",
+  "roles": [2]
+}
+
+### get user
+GET http://localhost:8080/users/get/6
+
+### get all users
+GET http://localhost:8080/users/get/all
+
+### update user
+PUT http://localhost:8080/users/update/5
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "mail": "johndoe@example.com",
+  "password": "password123",
   "roles": [1]
 }
 
-###
-GET http://localhost:8080/users/get/1
+### delete user
+DELETE http://localhost:8080/users/delete/5

@@ -22,7 +22,6 @@ public class RoleService {
 
 
     public void addRole(RoleDto roleDto){
-
         Role role = new Role();
         BeanUtils.copyProperties(roleDto, role, "rolePrivileges");
         Set<RolePrivilege> privileges = rolePrivilegeRepository.findAllByIds(roleDto.getRolePrivileges());
@@ -38,8 +37,15 @@ public class RoleService {
         return roleRepository.findAll();
     }
 
-//    public Role updateRole(RoleDto roleDto, Long id){
-//        Role role = new Role();
-//
-//    }
+    public Role updateRole(RoleDto roleDto, Long id){
+        Role role = roleRepository.findById(id).orElseThrow(() -> new RuntimeException("Role not found"));
+        BeanUtils.copyProperties(roleDto, role, "rolePrivileges");
+        Set<RolePrivilege> privileges = rolePrivilegeRepository.findAllByIds(roleDto.getRolePrivileges());
+        role.setRolePrivileges(privileges);
+        return roleRepository.save(role);
+    }
+
+    public void deleteRole(Long id){
+        roleRepository.deleteById(id);
+    }
 }
