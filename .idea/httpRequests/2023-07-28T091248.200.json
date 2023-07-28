@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "ADMIN",
+    "rolePrivileges": [
+      {
+        "id": 1,
+        "name": "USER_LOGIN"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "GUEST",
+    "rolePrivileges": []
+  }
+]

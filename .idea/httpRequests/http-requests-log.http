@@ -1,0 +1,584 @@
+POST http://localhost:8080/users/add
+Content-Type: application/json
+Content-Length: 97
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name": "Roy Kent 3",
+"mail": "roykent@tedlasso.com",
+"password": "royroyroy",
+  "roles": [2]
+}
+
+<> 2023-07-28T155608.500.json
+
+###
+
+DELETE http://localhost:8080/roles/delete/4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+PUT http://localhost:8080/roles/update/4
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "CHECKED",
+  "rolePrivileges": [1]
+}
+
+<> 2023-07-28T155556.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155548.200.json
+
+###
+
+GET http://localhost:8080/roles/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155543.200.json
+
+###
+
+POST http://localhost:8080/roles/add
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "TEST",
+  "rolePrivileges": []
+}
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155459.500.json
+
+###
+
+PUT http://localhost:8080/restaurants/update/1
+Content-Type: application/json
+Content-Length: 133
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "phone": "+375292249120",
+  "address": "st. Anders, 33",
+  "info": "some info for update",
+  "dishes": []
+}
+
+<> 2023-07-28T155350.500.json
+
+###
+
+GET http://localhost:8080/restaurants/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155347.500.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155319.500.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent"
+}
+
+<> 2023-07-28T155115.400.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155112.500.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T155018.500.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T154550.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T154220.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T153837.200.json
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 80
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent 3",
+  "cost": 12,
+  "restaurant": 1,
+  "menuCategory": 1
+}
+
+###
+
+GET http://localhost:8080/menu_categories/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T153309.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T153303.200.json
+
+###
+
+PUT http://localhost:8080/restaurants/update/1
+Content-Type: application/json
+Content-Length: 133
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "phone": "+375292249120",
+  "address": "st. Anders, 33",
+  "info": "some info for update",
+  "dishes": []
+}
+
+<> 2023-07-28T153036.200.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 40
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "dishes": []
+}
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 80
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent 2",
+  "cost": 12,
+  "restaurant": 1,
+  "menuCategory": 1
+}
+
+###
+
+GET http://localhost:8080/dishes/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T150621.400.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T150609.200.json
+
+###
+
+PUT http://localhost:8080/menu_categories/update/1
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent Spanish",
+  "dishes": []
+}
+
+<> 2023-07-28T150605.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T150541.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T150538.200.json
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 78
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "cost": 12,
+  "restaurant": 1,
+  "menuCategory": 1
+}
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 40
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "dishes": []
+}
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 78
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "cost": 12,
+  "restaurant": 1,
+  "menuCategory": 1
+}
+
+<> 2023-07-28T150518.500.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T145014.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T144930.200.json
+
+###
+
+PUT http://localhost:8080/restaurants/update/1
+Content-Type: application/json
+Content-Length: 133
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "phone": "+375292249120",
+  "address": "st. Anders, 33",
+  "info": "some info for update",
+  "dishes": []
+}
+
+<> 2023-07-28T144927.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T144920.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T144854.400.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T144839.400.json
+
+###
+
+POST http://localhost:8080/restaurants/add
+Content-Type: application/json
+Content-Length: 122
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Roy Kent",
+  "phone": "+375292249120",
+  "address": "st. Anders, 33",
+  "info": "some info",
+  "dishes": []
+}
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T091248.200.json
+
+###
+
+DELETE http://localhost:8080/roles/delete/3
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+PUT http://localhost:8080/roles/update/3
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "CHECKED",
+  "rolePrivileges": [1]
+}
+
+<> 2023-07-28T091206.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T091157.200.json
+
+###
+
+PUT http://localhost:8080/roles/update/3
+Content-Type: application/json
+Content-Length: 47
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "CHECKED",
+  "rolePrivileges": []
+}
+
+<> 2023-07-28T091145.200.json
+
+###
+
+POST http://localhost:8080/roles/add
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "TEST",
+  "rolePrivileges": []
+}
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T090937.200.json
+
+###
+
+GET http://localhost:8080/roles/get/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T090909.200.json
+
+###
+
+GET http://localhost:8080/users/get/6
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T090612.200.json
+
+###
+
+GET http://localhost:8080/users/get/6
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-28T090604.200.json
+
+###
+
+GET http://localhost:8080/users/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-27T161414.200.json
+
+###
+
+GET http://localhost:8080/users/get/6
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-27T161336.200.json
+
+###
+
+POST http://localhost:8080/users/add
+Content-Type: application/json
+Content-Length: 95
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name": "Roy Kent",
+"mail": "roykent@tedlasso.com",
+"password": "royroyroy",
+  "roles": [2]
+}
+
+###
+

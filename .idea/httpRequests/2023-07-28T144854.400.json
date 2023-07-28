@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-07-28T11:48:54.773+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/restaurants/get/all"
+}

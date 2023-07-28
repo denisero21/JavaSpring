@@ -1,5 +1,6 @@
 package by.softclub.menu_project.service;
 
+import by.softclub.menu_project.entity.Dish;
 import by.softclub.menu_project.entity.MenuCategory;
 import by.softclub.menu_project.entity.dto.MenuCategoryDto;
 import by.softclub.menu_project.repository.DishRepository;

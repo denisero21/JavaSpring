@@ -14,7 +14,7 @@ GET http://localhost:8080/roles/get/1
 GET http://localhost:8080/roles/get/all
 
 ### update role
-PUT http://localhost:8080/roles/update/4
+PUT http://localhost:8080/roles/update/3
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### delete role
-DELETE http://localhost:8080/roles/delete/4
+DELETE http://localhost:8080/roles/delete/3
 
 
 
@@ -33,7 +33,7 @@ POST http://localhost:8080/users/add
 Content-Type: application/json
 
 {
-"name": "Roy Kent 3",
+"name": "Roy Kent",
 "mail": "roykent@tedlasso.com",
 "password": "royroyroy",
   "roles": [2]

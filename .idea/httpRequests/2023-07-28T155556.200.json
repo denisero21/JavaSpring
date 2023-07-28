@@ -1,0 +1,10 @@
+{
+  "id": 4,
+  "name": "CHECKED",
+  "rolePrivileges": [
+    {
+      "id": 1,
+      "name": "USER_LOGIN"
+    }
+  ]
+}
