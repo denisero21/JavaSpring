@@ -44,6 +44,7 @@ public class UserService {
         user.setCreationDate(LocalDateTime.now());
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setRoles(roles);
+        userRepository.save(user);
         return user;
     }
 

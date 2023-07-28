@@ -2,6 +2,7 @@ package by.softclub.menu_project.controller;
 
 import by.softclub.menu_project.entity.Restaurant;
 
+import by.softclub.menu_project.entity.dto.RestaurantDto;
 import by.softclub.menu_project.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -20,9 +21,9 @@ public class RestaurantController {
     private final RestaurantService restaurantService;
 
     @PostMapping("/add")
-    public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurant) {
-        Restaurant savedRestaurant = restaurantService.addRestaurant(restaurant);
-        return ResponseEntity.ok(savedRestaurant);
+    public ResponseEntity<Void> addRestaurant(@RequestBody RestaurantDto restaurantDto) {
+        restaurantService.addRestaurant(restaurantDto);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/all")
@@ -31,13 +32,13 @@ public class RestaurantController {
     }
 
     @GetMapping("/get/{id}")
-    public Optional<Restaurant> getRestaurant(@PathVariable("id") Long id) {
-        return restaurantService.getRestaurant(id);
+    public ResponseEntity<Restaurant> getRestaurant(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(restaurantService.getRestaurant(id));
     }
 
     @PutMapping("/update/{restId}")
-    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant, @PathVariable Long restId) {
-        Restaurant updatedRestaurant = restaurantService.updateRestaurant(restaurant, restId);
+    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody RestaurantDto restaurantDto, @PathVariable Long restId) {
+        Restaurant updatedRestaurant = restaurantService.updateRestaurant(restaurantDto, restId);
         return ResponseEntity.ok(updatedRestaurant);
     }
 

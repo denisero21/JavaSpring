@@ -42,7 +42,8 @@ public class RoleService {
         BeanUtils.copyProperties(roleDto, role, "rolePrivileges");
         Set<RolePrivilege> privileges = rolePrivilegeRepository.findAllByIds(roleDto.getRolePrivileges());
         role.setRolePrivileges(privileges);
-        return roleRepository.save(role);
+        roleRepository.save(role);
+        return role;
     }
 
     public void deleteRole(Long id){

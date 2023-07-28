@@ -22,5 +22,30 @@ public class RestaurantService {
         Restaurant restaurant = new Restaurant();
         BeanUtils.copyProperties(restaurantDto, restaurant, "dishes");
         List<Dish> dishes = dishRepository.findAllByIds(restaurantDto.getDishes());
+        restaurant.setDishes(dishes);
+        restaurantRepository.save(restaurant);
+    }
+
+    public Restaurant getRestaurant(Long id){
+        return restaurantRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("Restaurant nor found"));
+    }
+
+    public List<Restaurant> getRestaurants(){
+        return restaurantRepository.findAll();
+    }
+
+    public Restaurant updateRestaurant(RestaurantDto restaurantDto, Long id){
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("Restaurant not found"));
+        BeanUtils.copyProperties(restaurantDto, restaurant, "dishes");
+        List<Dish> dishes = dishRepository.findAllByIds(restaurantDto.getDishes());
+        restaurant.setDishes(dishes);
+        restaurantRepository.save(restaurant);
+        return restaurant;
+    }
+
+    public void deleteRestaurant(Long id){
+        restaurantRepository.deleteById(id);
     }
 }
