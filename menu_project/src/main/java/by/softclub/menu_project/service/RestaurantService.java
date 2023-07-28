@@ -1,17 +1,26 @@
 package by.softclub.menu_project.service;
 
+import by.softclub.menu_project.entity.Dish;
 import by.softclub.menu_project.entity.Restaurant;
+import by.softclub.menu_project.entity.dto.RestaurantDto;
+import by.softclub.menu_project.repository.DishRepository;
+import by.softclub.menu_project.repository.RestaurantRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface RestaurantService {
-    Restaurant addRestaurant(Restaurant restaurant);
+@Service
+@RequiredArgsConstructor
+public class RestaurantService {
 
-    List<Restaurant> getRestaurants();
-    Optional<Restaurant> getRestaurant(Long id);
+    private final RestaurantRepository restaurantRepository;
+    private final DishRepository dishRepository;
 
-    Restaurant updateRestaurant(Restaurant restaurant, Long restId);
-
-    void deleteRestaurant(Long restId);
+    public void addRestaurant(RestaurantDto restaurantDto){
+        Restaurant restaurant = new Restaurant();
+        BeanUtils.copyProperties(restaurantDto, restaurant, "dishes");
+        List<Dish> dishes = dishRepository.findAllByIds(restaurantDto.getDishes());
+    }
 }

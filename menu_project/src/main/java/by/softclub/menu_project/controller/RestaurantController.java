@@ -1,16 +1,12 @@
 package by.softclub.menu_project.controller;
 
 import by.softclub.menu_project.entity.Restaurant;
-import by.softclub.menu_project.repository.RestaurantRepository;
-import by.softclub.menu_project.service.RestaurantServiceImpl;
 
-import jakarta.validation.Valid;
+import by.softclub.menu_project.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +17,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class RestaurantController {
     
-    private final RestaurantServiceImpl restaurantService;
+    private final RestaurantService restaurantService;
 
     @PostMapping("/add")
     public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurant) {

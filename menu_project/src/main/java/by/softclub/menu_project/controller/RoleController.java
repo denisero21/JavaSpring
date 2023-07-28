@@ -11,11 +11,12 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/roles")
 public class RoleController {
 
     private final RoleService roleService;
 
-    @PostMapping("role/add")
+    @PostMapping("/add")
     public ResponseEntity<Void> addRole(@RequestBody RoleDto roleDto){
         roleService.addRole(roleDto);
         return ResponseEntity.ok().build();
