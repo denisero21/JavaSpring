@@ -36,9 +36,9 @@ public class Dish {
     @ManyToOne
     private MenuCategory menuCategory;
 
-    @ManyToMany
+    @ManyToOne
     @JsonIgnore
-    private List<Order> orders;
+    private Order orders;
 
 
 

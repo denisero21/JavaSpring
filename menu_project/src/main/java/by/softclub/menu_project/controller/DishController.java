@@ -28,7 +28,7 @@ public class DishController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/all")
+    @GetMapping("/get/all")
     public List<Dish> getAllDishes(){
         return dishService.getDishes();
     }
@@ -40,7 +40,8 @@ public class DishController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<Dish> updateDish(@RequestBody DishDto dishDto, @PathVariable("id") Long id) {
-        return ResponseEntity.ok(dishService.updateDish(dishDto, id));
+        Dish dish = dishService.updateDish(dishDto, id);
+        return ResponseEntity.ok(dish);
     }
 
     @DeleteMapping("/delete/{id}")

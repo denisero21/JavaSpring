@@ -15,5 +15,4 @@ public class MenuCategoryDto {
     
     private String name;
 
-    private List<Long> dishes;
 }

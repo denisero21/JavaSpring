@@ -25,6 +25,9 @@ Content-Type: application/json
 ### delete role
 DELETE http://localhost:8080/roles/delete/3
 
+
+
+
 ### add user
 POST http://localhost:8080/users/add
 Content-Type: application/json
@@ -55,3 +58,108 @@ Content-Type: application/json
 
 ### delete user
 DELETE http://localhost:8080/users/delete/5
+
+
+
+
+
+
+### add restaurant
+POST http://localhost:8080/restaurants/add
+Content-Type: application/json
+
+{
+  "name": "Roy Kent",
+  "phone": "+375292249120",
+  "address": "st. Anders, 33",
+  "info": "some info",
+  "dishes": []
+}
+
+### get restaurant
+GET http://localhost:8080/restaurants/get/1
+
+### get all restaurants
+GET http://localhost:8080/restaurants/get/all
+
+### update restaurant
+PUT http://localhost:8080/restaurants/update/1
+Content-Type: application/json
+
+{
+  "name": "Roy Kent",
+  "phone": "+375292249120",
+  "address": "st. Anders, 33",
+  "info": "some info for update",
+  "dishes": []
+}
+
+### delete restaurant
+DELETE http://localhost:8080/restaurants/delete/5
+
+
+
+
+
+
+### add menu category
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+
+{
+  "name": "Roy Kent"
+}
+
+### get menu category
+GET http://localhost:8080/menu_categories/get/1
+
+### get all menu categories
+GET http://localhost:8080/menu_categories/get/all
+
+### update menu category
+PUT http://localhost:8080/menu_categories/update/1
+Content-Type: application/json
+
+{
+  "name": "Roy Kent Spanish"
+}
+
+### delete menu category
+DELETE http://localhost:8080/menu_categories/delete/5
+
+
+
+
+
+
+### add dish
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+
+{
+  "name": "Roy Kent 3",
+  "cost": 12,
+  "restaurant": 1,
+  "menuCategory": 1
+}
+
+### get dish
+GET http://localhost:8080/dishes/get/1
+
+### get all dishes
+GET http://localhost:8080/dishes/get/all
+
+### update dish
+PUT http://localhost:8080/dishes/update/3
+Content-Type: application/json
+
+{
+  "name": "Roy Kent cocktail 3",
+  "cost": 12,
+  "restaurant": 1,
+  "menuCategory": 1
+}
+
+### delete dish
+DELETE http://localhost:8080/dishes/delete/5
+

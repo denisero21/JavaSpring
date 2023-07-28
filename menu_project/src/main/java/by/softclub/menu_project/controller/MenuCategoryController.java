@@ -23,7 +23,7 @@ public class MenuCategoryController {
     }
 
     @GetMapping("/get/all")
-    public List<MenuCategory> getMenuCategoories(){
+    public List<MenuCategory> getMenuCategories(){
         return menuCategoryService.getMenuCategories();
     }
 

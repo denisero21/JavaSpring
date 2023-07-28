@@ -32,7 +32,7 @@ public class Order {
     @Column(name = "cost")
     private Integer cost;
 
-    @ManyToMany(mappedBy = "order")
+    @ManyToMany
     private List<Dish> dishes;
 
     @ManyToOne

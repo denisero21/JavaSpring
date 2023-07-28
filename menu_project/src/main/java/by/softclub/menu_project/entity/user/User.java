@@ -1,5 +1,7 @@
 package by.softclub.menu_project.entity.user;
 
+import by.softclub.menu_project.entity.Order;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -32,6 +35,10 @@ public class User {
     private String password;
 
     private LocalDateTime creationDate;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Order> orders;
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",
