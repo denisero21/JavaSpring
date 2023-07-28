@@ -78,19 +78,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MenuProjectApplication">
-    <configuration name="test | add menu category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="16" requestIdentifier="add menu category" runType="Run single request">
+    <configuration name="test | add user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="6" requestIdentifier="add user" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | get all restaurants" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="13" requestIdentifier="get all restaurants" runType="Run single request">
+    <configuration name="test | delete role" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="5" requestIdentifier="delete role" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | get menu category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="17" requestIdentifier="get menu category" runType="Run single request">
+    <configuration name="test | get role" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="2" requestIdentifier="get role" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | get restaurant" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="12" requestIdentifier="get restaurant" runType="Run single request">
+    <configuration name="test | get roles" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="3" requestIdentifier="get roles" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | update restaurant" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="14" requestIdentifier="update restaurant" runType="Run single request">
+    <configuration name="test | update role" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="4" requestIdentifier="update role" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="MenuProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -102,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.test | update restaurant" />
-        <item itemvalue="HTTP Request.test | get restaurant" />
-        <item itemvalue="HTTP Request.test | get all restaurants" />
-        <item itemvalue="HTTP Request.test | add menu category" />
-        <item itemvalue="HTTP Request.test | get menu category" />
+        <item itemvalue="HTTP Request.test | add user" />
+        <item itemvalue="HTTP Request.test | delete role" />
+        <item itemvalue="HTTP Request.test | update role" />
+        <item itemvalue="HTTP Request.test | get roles" />
+        <item itemvalue="HTTP Request.test | get role" />
       </list>
     </recent_temporary>
   </component>
