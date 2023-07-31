@@ -1,0 +1,14 @@
+{
+  "id": 6,
+  "name": "WAITER",
+  "rolePrivileges": [
+    {
+      "id": 2,
+      "name": "TAKE_ORDER"
+    },
+    {
+      "id": 1,
+      "name": "USER_LOGIN"
+    }
+  ]
+}

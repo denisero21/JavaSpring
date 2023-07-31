@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-07-31T11:12:15.758+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/menu_categories/add"
+}

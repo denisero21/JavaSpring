@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "ADMIN",
+    "rolePrivileges": [
+      {
+        "id": 2,
+        "name": "TAKE_ORDER"
+      },
+      {
+        "id": 1,
+        "name": "USER_LOGIN"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "GUEST",
+    "rolePrivileges": [
+      {
+        "id": 2,
+        "name": "TAKE_ORDER"
+      },
+      {
+        "id": 1,
+        "name": "USER_LOGIN"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "CLIENT",
+    "rolePrivileges": [
+      {
+        "id": 1,
+        "name": "USER_LOGIN"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "WAITER",
+    "rolePrivileges": [
+      {
+        "id": 2,
+        "name": "TAKE_ORDER"
+      },
+      {
+        "id": 1,
+        "name": "USER_LOGIN"
+      }
+    ]
+  }
+]

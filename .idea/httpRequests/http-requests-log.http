@@ -1,0 +1,615 @@
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152906.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152736.200.json
+
+###
+
+GET http://localhost:8080/dishes/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152705.200.json
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Ramen",
+  "cost": 17,
+  "restaurant": 2,
+  "menuCategory": 9
+}
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 74
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Taco",
+  "cost": 12,
+  "restaurant": 2,
+  "menuCategory": 8
+}
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 74
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Hamon",
+  "cost": 9,
+  "restaurant": 2,
+  "menuCategory": 5
+}
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152511.200.json
+
+###
+
+POST http://localhost:8080/dishes/add
+Content-Type: application/json
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Pasta",
+  "cost": 14,
+  "restaurant": 2,
+  "menuCategory": 7
+}
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152414.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152408.200.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Japanese",
+  "restaurant": 2
+}
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Mexican",
+  "restaurant": 2
+}
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Italian",
+  "restaurant": 2
+}
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152301.200.json
+
+###
+
+DELETE http://localhost:8080/menu_categories/delete/6
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152249.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152241.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T152001.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T144155.200.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Spanish",
+  "restaurant": 2
+}
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T144140.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T144134.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T142939.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T142923.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T142545.200.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T142532.200.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Spanish",
+  "restaurant": 2
+}
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Spanish",
+  "restaurant": 2
+}
+
+<> 2023-07-31T141354.500.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 61
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Spanish",
+  "restaurant_id": 2,
+  "dishes": []
+}
+
+<> 2023-07-31T141215.500.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 45
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Spanish",
+  "restaurant_id": 2
+}
+
+<> 2023-07-31T141123.500.json
+
+###
+
+POST http://localhost:8080/menu_categories/add
+Content-Type: application/json
+Content-Length: 45
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Spanish",
+  "restaurant_id": 2
+}
+
+<> 2023-07-31T140949.500.json
+
+###
+
+GET http://localhost:8080/menu_categories/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T140924.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T140648.200.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T140010.200.json
+
+###
+
+DELETE http://localhost:8080/restaurants/delete/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T140005.200.txt
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T140000.200.json
+
+###
+
+DELETE http://localhost:8080/restaurants/delete/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135826.500.json
+
+###
+
+GET http://localhost:8080/restaurants/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135810.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135547.200.json
+
+###
+
+PUT http://localhost:8080/roles/update/2
+Content-Type: application/json
+Content-Length: 49
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "GUEST",
+  "rolePrivileges": [1, 2]
+}
+
+<> 2023-07-31T135543.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135534.200.json
+
+###
+
+PUT http://localhost:8080/roles/update/1
+Content-Type: application/json
+Content-Length: 49
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "ADMIN",
+  "rolePrivileges": [1, 2]
+}
+
+<> 2023-07-31T135527.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135503.200.json
+
+###
+
+PUT http://localhost:8080/roles/update/5
+Content-Type: application/json
+Content-Length: 47
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "CLIENT",
+  "rolePrivileges": [1]
+}
+
+<> 2023-07-31T135454.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135435.200.json
+
+###
+
+PUT http://localhost:8080/roles/update/5
+Content-Type: application/json
+Content-Length: 47
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "WAITER",
+  "rolePrivileges": [1]
+}
+
+<> 2023-07-31T135426.500.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135416.200.json
+
+###
+
+PUT http://localhost:8080/roles/update/6
+Content-Type: application/json
+Content-Length: 49
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "WAITER",
+  "rolePrivileges": [1,2]
+}
+
+<> 2023-07-31T135409.200.json
+
+###
+
+GET http://localhost:8080/roles/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135358.200.json
+
+###
+
+GET http://localhost:8080/privilege/get/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=76457AD411A47D111CE612FAE6A2CA48
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-31T135130.200.json
+
+###
+

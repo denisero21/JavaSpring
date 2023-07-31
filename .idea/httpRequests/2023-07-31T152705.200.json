@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "restaurant": {
+      "id": 2,
+      "name": "Lollipub",
+      "phone": "+375292249121",
+      "address": "st. Bank, 31",
+      "info": "some info for no reason",
+      "menuCategories": [
+        {
+          "id": 5,
+          "name": "Spanish"
+        },
+        {
+          "id": 7,
+          "name": "Italian"
+        },
+        {
+          "id": 8,
+          "name": "Mexican"
+        },
+        {
+          "id": 9,
+          "name": "Japanese"
+        }
+      ]
+    },
+    "name": "Pasta",
+    "cost": 14.0,
+    "menuCategory": {
+      "id": 7,
+      "name": "Italian"
+    }
+  },
+  {
+    "id": 2,
+    "restaurant": {
+      "id": 2,
+      "name": "Lollipub",
+      "phone": "+375292249121",
+      "address": "st. Bank, 31",
+      "info": "some info for no reason",
+      "menuCategories": [
+        {
+          "id": 5,
+          "name": "Spanish"
+        },
+        {
+          "id": 7,
+          "name": "Italian"
+        },
+        {
+          "id": 8,
+          "name": "Mexican"
+        },
+        {
+          "id": 9,
+          "name": "Japanese"
+        }
+      ]
+    },
+    "name": "Hamon",
+    "cost": 9.0,
+    "menuCategory": {
+      "id": 5,
+      "name": "Spanish"
+    }
+  },
+  {
+    "id": 3,
+    "restaurant": {
+      "id": 2,
+      "name": "Lollipub",
+      "phone": "+375292249121",
+      "address": "st. Bank, 31",
+      "info": "some info for no reason",
+      "menuCategories": [
+        {
+          "id": 5,
+          "name": "Spanish"
+        },
+        {
+          "id": 7,
+          "name": "Italian"
+        },
+        {
+          "id": 8,
+          "name": "Mexican"
+        },
+        {
+          "id": 9,
+          "name": "Japanese"
+        }
+      ]
+    },
+    "name": "Taco",
+    "cost": 12.0,
+    "menuCategory": {
+      "id": 8,
+      "name": "Mexican"
+    }
+  },
+  {
+    "id": 4,
+    "restaurant": {
+      "id": 2,
+      "name": "Lollipub",
+      "phone": "+375292249121",
+      "address": "st. Bank, 31",
+      "info": "some info for no reason",
+      "menuCategories": [
+        {
+          "id": 5,
+          "name": "Spanish"
+        },
+        {
+          "id": 7,
+          "name": "Italian"
+        },
+        {
+          "id": 8,
+          "name": "Mexican"
+        },
+        {
+          "id": 9,
+          "name": "Japanese"
+        }
+      ]
+    },
+    "name": "Ramen",
+    "cost": 17.0,
+    "menuCategory": {
+      "id": 9,
+      "name": "Japanese"
+    }
+  }
+]
