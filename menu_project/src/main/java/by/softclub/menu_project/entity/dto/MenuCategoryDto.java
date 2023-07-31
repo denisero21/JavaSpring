@@ -17,6 +17,8 @@ public class MenuCategoryDto {
     @NotBlank
     private String name;
 
+    private Long restaurant;
+
     private List<Long> dishes;
 
 }

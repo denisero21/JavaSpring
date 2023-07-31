@@ -1,5 +1,6 @@
 package by.softclub.menu_project.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
@@ -30,4 +31,9 @@ public class MenuCategory {
     @OneToMany(mappedBy = "menuCategory")
     @JsonIgnore
     private List<Dish> dishes;
+
+    @ManyToOne
+    @JoinColumn(name = "restaurant_id")
+    @JsonBackReference
+    private Restaurant restaurant;
 }

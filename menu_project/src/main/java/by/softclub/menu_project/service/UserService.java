@@ -21,7 +21,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
 
-    public void addUser(UserDto userDto){
+    public void add(UserDto userDto){
         User newUser = new User();
         BeanUtils.copyProperties(userDto, newUser, "roles");
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
@@ -30,24 +30,25 @@ public class UserService {
         userRepository.save(newUser);
     }
 
-    public User getUser(Long id){
+    public User getById(Long id){
         return userRepository.findById(id).orElseThrow(() ->  new RuntimeException("User not found"));
     }
 
-    public List<User> getUsers(){
+    public List<User> getAll(){
         return userRepository.findAll();
     }
 
-    public User updateUser(UserDto userDto, Long id){
+    public User update(UserDto userDto, Long id){
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         BeanUtils.copyProperties(userDto, user, "roles");
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setRoles(roles);
+        user.setCreationDate(LocalDateTime.now());
         userRepository.save(user);
         return user;
     }
 
-    public void deleteUser(Long id){
+    public void delete(Long id){
         userRepository.deleteById(id);
     }
 }

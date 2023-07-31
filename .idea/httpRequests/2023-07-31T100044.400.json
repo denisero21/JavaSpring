@@ -1,6 +1,0 @@
-{
-  "timestamp": "2023-07-31T07:00:43.993+00:00",
-  "status": 400,
-  "error": "Bad Request",
-  "path": "/menu_categories/add"
-}

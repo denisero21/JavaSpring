@@ -49,12 +49,14 @@ CREATE TABLE IF NOT EXISTS restaurant (
 
 CREATE TABLE IF NOT EXISTS menu_category (
  id BIGSERIAL PRIMARY KEY,
- name varchar(255) NOT NULL
+ name varchar(255) NOT NULL,
+ restaurant_id BIGSERIAL,
+ FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE SET NULL
 );
 
 CREATE TABLE IF NOT EXISTS dish (
   id BIGSERIAL PRIMARY KEY,
-  restaurant_id BIGSERIAL NOT NULL,
+  restaurant_id BIGSERIAL,
   menu_category_id BIGSERIAL,
   name varchar(255) NOT NULL,
   cost decimal NOT NULL,

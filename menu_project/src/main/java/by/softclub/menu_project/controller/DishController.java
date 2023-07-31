@@ -24,30 +24,30 @@ public class DishController {
 
     @PostMapping("/add")
     public ResponseEntity<Void> addDish(@RequestBody DishDto dishDto) {
-        dishService.addDish(dishDto);
+        dishService.add(dishDto);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/get/all")
     public List<Dish> getAllDishes(){
-        return dishService.getDishes();
+        return dishService.getAll();
     }
 
     @GetMapping("/get/{id}")
     public ResponseEntity<Dish> getDish(@PathVariable("id") Long id){
-        return ResponseEntity.ok(dishService.getDish(id));
+        return ResponseEntity.ok(dishService.getById(id));
     }
 
     @PutMapping("/update/{id}")
     public ResponseEntity<Dish> updateDish(@RequestBody DishDto dishDto, @PathVariable("id") Long id) {
-        Dish dish = dishService.updateDish(dishDto, id);
+        Dish dish = dishService.update(dishDto, id);
         return ResponseEntity.ok(dish);
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteDish(@PathVariable("id") Long dishId){
         try {
-            dishService.deleteDish(dishId);
+            dishService.delete(dishId);
             return new ResponseEntity<>("Dish with ID " + dishId + " has been deleted.", HttpStatus.OK);
         } catch (EmptyResultDataAccessException e) {
             return new ResponseEntity<>("Dish with ID " + dishId + " not found.", HttpStatus.NOT_FOUND);

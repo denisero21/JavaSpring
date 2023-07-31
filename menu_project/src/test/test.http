@@ -1,9 +1,39 @@
+### add privilege
+POST http://localhost:8080/privilege/add
+Content-Type: application/json
+
+{
+  "name": "TAKE_ORDER"
+}
+
+### get privileges
+GET http://localhost:8080/privilege/get/all
+
+### get privilege
+GET http://localhost:8080/privilege/get/1
+
+### update privilege
+PUT http://localhost:8080/privilege/update/1
+Content-Type: application/json
+
+{
+  "name": "TAKE_ORDER"
+}
+
+### delete privilege
+DELETE http://localhost:8080/privilege/delete/1
+
+
+
+
+
+
 ### add role
 POST http://localhost:8080/roles/add
 Content-Type: application/json
 
 {
-  "name": "TEST",
+  "name": "WAITER",
   "rolePrivileges": []
 }
 
@@ -14,12 +44,12 @@ GET http://localhost:8080/roles/get/1
 GET http://localhost:8080/roles/get/all
 
 ### update role
-PUT http://localhost:8080/roles/update/4
+PUT http://localhost:8080/roles/update/2
 Content-Type: application/json
 
 {
-  "name": "CHECKED",
-  "rolePrivileges": [1]
+  "name": "GUEST",
+  "rolePrivileges": [1, 2]
 }
 
 ### delete role
@@ -33,10 +63,10 @@ POST http://localhost:8080/users/add
 Content-Type: application/json
 
 {
-"name": "Roy Kent 3",
-"mail": "roykent@tedladsso.com",
-"password": "royroyroy",
-  "roles": [2]
+"name": "Arto",
+"mail": "artokovalsen@gmail.com",
+"password": "crazzy14",
+  "roles": [1]
 }
 
 ### get user
@@ -46,14 +76,14 @@ GET http://localhost:8080/users/get/6
 GET http://localhost:8080/users/get/all
 
 ### update user
-PUT http://localhost:8080/users/update/6
+PUT http://localhost:8080/users/update/11
 Content-Type: application/json
 
 {
-  "name": "Roy Kent updated",
-  "mail": "roykent@tedlasso.com",
-  "password": "royroyroy",
-  "roles": [2]
+  "name": "Arto",
+  "mail": "artokovalsen@gmail.com",
+  "password": "crazzy14",
+  "roles": [5]
 }
 
 ### delete user
@@ -93,7 +123,7 @@ Content-Type: application/json
 }
 
 ### delete restaurant
-DELETE http://localhost:8080/restaurants/delete/3
+DELETE http://localhost:8080/restaurants/delete/1
 
 
 
@@ -105,7 +135,8 @@ POST http://localhost:8080/menu_categories/add
 Content-Type: application/json
 
 {
-  "name": "Spanish"
+  "name": "Japanese",
+  "restaurant": 2
 }
 
 ### get menu category
@@ -123,7 +154,7 @@ Content-Type: application/json
 }
 
 ### delete menu category
-DELETE http://localhost:8080/menu_categories/delete/1
+DELETE http://localhost:8080/menu_categories/delete/6
 
 
 
@@ -135,10 +166,10 @@ POST http://localhost:8080/dishes/add
 Content-Type: application/json
 
 {
-  "name": "Pasta",
-  "cost": 12,
-  "restaurant": 1,
-  "menuCategory": 2
+  "name": "Ramen",
+  "cost": 17,
+  "restaurant": 2,
+  "menuCategory": 9
 }
 
 ### get dish
@@ -159,5 +190,5 @@ Content-Type: application/json
 }
 
 ### delete dish
-DELETE http://localhost:8080/dishes/delete/2
+DELETE http://localhost:8080/dishes/delete/5
 

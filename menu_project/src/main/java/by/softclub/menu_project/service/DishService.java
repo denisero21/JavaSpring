@@ -23,7 +23,7 @@ public class DishService {
     private final RestaurantRepository restaurantRepository;
     private final MenuCategoryRepository menuCategoryRepository;
 
-    public void addDish(DishDto dishDto) {
+    public void add(DishDto dishDto) {
         Dish dish = new Dish();
         BeanUtils.copyProperties(dishDto, dish, "restaurant", "menuCategory");
         dish.setRestaurant(restaurantRepository.findById(dishDto.getRestaurant())
@@ -34,16 +34,16 @@ public class DishService {
     }
 
 
-    public List<Dish> getDishes() {
+    public List<Dish> getAll() {
         return dishRepository.findAll();
     }
 
-    public Dish getDish(Long id) {
+    public Dish getById(Long id) {
         return dishRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Dish not found"));
     }
 
-    public Dish updateDish(DishDto dishDto, Long id){
+    public Dish update(DishDto dishDto, Long id){
         Dish dish = dishRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Dish not found"));
         BeanUtils.copyProperties(dishDto, dish, "restaurant", "menuCategory");
@@ -55,7 +55,7 @@ public class DishService {
         return dish;
     }
 
-    public void deleteDish(Long restId) {
+    public void delete(Long restId) {
         dishRepository.deleteById(restId);
     }
 }

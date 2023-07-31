@@ -21,4 +21,6 @@ public class RestaurantDto {
     private String info;
 
     private List<Long> dishes;
+
+    private List<Long> menuCategories;
 }

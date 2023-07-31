@@ -18,28 +18,28 @@ public class MenuCategoryController {
 
     @PostMapping("/add")
     public ResponseEntity<Void> addMenuCategory(@RequestBody MenuCategoryDto menuCategoryDto){
-        menuCategoryService.addMenuCategory(menuCategoryDto);
+        menuCategoryService.add(menuCategoryDto);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/get/all")
     public List<MenuCategory> getMenuCategories(){
-        return menuCategoryService.getMenuCategories();
+        return menuCategoryService.getAll();
     }
 
     @GetMapping("/get/{id}")
     public ResponseEntity<MenuCategory> getMenuCategory(@PathVariable("id") Long id){
-        return ResponseEntity.ok(menuCategoryService.getMenuCategory(id));
+        return ResponseEntity.ok(menuCategoryService.getById(id));
     }
 
     @PutMapping("/update/{id}")
     public ResponseEntity<MenuCategory> updateMenuCategory(@RequestBody MenuCategoryDto menuCategoryDto, @PathVariable("id") Long id){
-        return ResponseEntity.ok(menuCategoryService.updateMenuCategory(menuCategoryDto, id));
+        return ResponseEntity.ok(menuCategoryService.update(menuCategoryDto, id));
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteMenuCategory(@PathVariable("id") Long id){
-        menuCategoryService.deleteMenuCategory(id);
+        menuCategoryService.delete(id);
         return ResponseEntity.ok().build();
     }
 }
