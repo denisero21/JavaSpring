@@ -1,6 +1,0 @@
-{
-  "timestamp": "2023-07-31T10:54:26.738+00:00",
-  "status": 500,
-  "error": "Internal Server Error",
-  "path": "/roles/update/5"
-}
