@@ -34,12 +34,7 @@ public class Dish {
     private Double cost;
 
     @ManyToOne
+    @JoinColumn(name = "menu_category_id")
     private MenuCategory menuCategory;
-
-    @ManyToOne
-    @JsonIgnore
-    private Order orders;
-
-
 
 }

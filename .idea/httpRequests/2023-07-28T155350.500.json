@@ -1,6 +1,0 @@
-{
-  "timestamp": "2023-07-28T12:53:50.819+00:00",
-  "status": 500,
-  "error": "Internal Server Error",
-  "path": "/restaurants/update/1"
-}

@@ -40,8 +40,7 @@ public class UserService {
 
     public User updateUser(UserDto userDto, Long id){
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-        BeanUtils.copyProperties(userDto, user, "roles", "creationDate");
-        user.setCreationDate(LocalDateTime.now());
+        BeanUtils.copyProperties(userDto, user, "roles");
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setRoles(roles);
         userRepository.save(user);

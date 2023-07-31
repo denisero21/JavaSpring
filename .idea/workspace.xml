@@ -4,7 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61661c23-5774-4dcc-863a-197d4733f97a" name="Changes" comment="" />
+    <list default="true" id="61661c23-5774-4dcc-863a-197d4733f97a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/menu_project/spec.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/controller/DishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/controller/MenuCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/controller/PrivilegeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/MenuCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/dto/DishDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/dto/MenuCategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/dto/RestaurantDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/dto/RoleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/repository/DishRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/repository/MenuCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/repository/RolePrivilegeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/service/DishService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/service/MenuCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/service/RestaurantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/service/RolePrivilegeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eeec43da-7999-47c4-89be-f2f033c4943c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eeec43da-7999-47c4-89be-f2f033c4943c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-27T161336.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-27T161414.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T090604.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T090612.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T090909.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T090937.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T091145.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T091157.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T091206.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T091248.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T144839.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T144854.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T144920.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T144927.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T144930.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T145014.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T150518.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T150538.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T150541.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T150605.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T150609.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T150621.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T153036.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T153303.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T153309.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T153837.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T154220.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T154550.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T155018.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-07-28T155112.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/MenuProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/MenuProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/com/example/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/com/example/entity/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/com/example/entity/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/entity/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/com/example/repository/RestaurantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/src/main/java/by/softclub/menu_project/repository/RestaurantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/com/example/service/RestaurantService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/java/com/example/service/RestaurantServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/menu_project/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +110,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -51,6 +118,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/yaroshchanka/AppData/Roaming/JetBrains/IntelliJIdea2023.1/jdbc-drivers/PostgreSQL/42.6.0/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar&quot;,
@@ -78,19 +146,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MenuProjectApplication">
-    <configuration name="test | add user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="6" requestIdentifier="add user" runType="Run single request">
+    <configuration name="test | delete menu category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="20" requestIdentifier="delete menu category" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | delete role" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="5" requestIdentifier="delete role" runType="Run single request">
+    <configuration name="test | get all dishes" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="23" requestIdentifier="get all dishes" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | get role" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="2" requestIdentifier="get role" runType="Run single request">
+    <configuration name="test | get all menu categories" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="18" requestIdentifier="get all menu categories" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | get roles" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="3" requestIdentifier="get roles" runType="Run single request">
+    <configuration name="test | get menu category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="17" requestIdentifier="get menu category" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | update role" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="4" requestIdentifier="update role" runType="Run single request">
+    <configuration name="test | update menu category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/menu_project/src/test/test.http" index="19" requestIdentifier="update menu category" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="MenuProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -102,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.test | add user" />
-        <item itemvalue="HTTP Request.test | delete role" />
-        <item itemvalue="HTTP Request.test | update role" />
-        <item itemvalue="HTTP Request.test | get roles" />
-        <item itemvalue="HTTP Request.test | get role" />
+        <item itemvalue="HTTP Request.test | get all dishes" />
+        <item itemvalue="HTTP Request.test | get all menu categories" />
+        <item itemvalue="HTTP Request.test | delete menu category" />
+        <item itemvalue="HTTP Request.test | update menu category" />
+        <item itemvalue="HTTP Request.test | get menu category" />
       </list>
     </recent_temporary>
   </component>
@@ -132,6 +200,8 @@
       <workItem from="1690441803215" duration="9891000" />
       <workItem from="1690523389984" duration="13133000" />
       <workItem from="1690546255379" duration="2581000" />
+      <workItem from="1690548857992" duration="441000" />
+      <workItem from="1690783439684" duration="5341000" />
     </task>
     <servers />
   </component>

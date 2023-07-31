@@ -1,0 +1,1 @@
+Restaurant with ID 3 has been deleted.

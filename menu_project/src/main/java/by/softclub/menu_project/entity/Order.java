@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "order")
+@Table(name = "order_")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
@@ -31,16 +31,6 @@ public class Order {
 
     @Column(name = "cost")
     private Integer cost;
-
-    @ManyToMany
-    private List<Dish> dishes;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    @JsonIgnore
-    private User user;
-
-    @OneToOne
-    private Payment payment;
+    
 
 }

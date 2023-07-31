@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-07-31T07:38:00.013+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/dishes/update/3"
+}

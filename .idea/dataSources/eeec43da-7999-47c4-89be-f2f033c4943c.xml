@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1103</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1123</IntrospectionStateNumber>
       <ServerVersion>14.5</ServerVersion>
       <StartupTime>1689838243</StartupTime>
       <TimeZones>true ACDT
@@ -805,7 +805,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>1103</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1123</IntrospectionStateNumber>
       <ObjectId>16821</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4230,39 +4230,39 @@ false Zulu
     <schema id="262" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1103</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1123</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <sequence id="263" parent="262" name="dish_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>17075</ObjectId>
-      <SequenceIdentity>1(4)</SequenceIdentity>
+      <ObjectId>17152</ObjectId>
+      <SequenceIdentity>1(1)</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="264" parent="262" name="dish_menu_category_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>17077</ObjectId>
+      <ObjectId>17154</ObjectId>
       <SequenceIdentity>1(1)</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="265" parent="262" name="dish_restaurant_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>17076</ObjectId>
+      <ObjectId>17153</ObjectId>
       <SequenceIdentity>1(1)</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="262" name="menu_category_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17068</ObjectId>
-      <SequenceIdentity>1(3)</SequenceIdentity>
+      <SequenceIdentity>1(4)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1027</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4278,7 +4278,7 @@ false Zulu
     <sequence id="268" parent="262" name="restaurant_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17041</ObjectId>
-      <SequenceIdentity>1(2)</SequenceIdentity>
+      <SequenceIdentity>1(4)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1023</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4310,7 +4310,7 @@ false Zulu
     <sequence id="272" parent="262" name="user__id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17099</ObjectId>
-      <SequenceIdentity>1(9)</SequenceIdentity>
+      <SequenceIdentity>1(10)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1048</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4332,8 +4332,8 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="275" parent="262" name="dish">
-      <ObjectId>17078</ObjectId>
-      <StateNumber>1029</StateNumber>
+      <ObjectId>17155</ObjectId>
+      <StateNumber>1122</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4384,8 +4384,8 @@ false Zulu
       <DefaultExpression>nextval(&apos;dish_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1029</StateNumber>
-      <SequenceId>17075</SequenceId>
+      <StateNumber>1122</StateNumber>
+      <SequenceId>17152</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="284" parent="275" name="restaurant_id">
@@ -4393,8 +4393,8 @@ false Zulu
       <DefaultExpression>nextval(&apos;dish_restaurant_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1029</StateNumber>
-      <SequenceId>17076</SequenceId>
+      <StateNumber>1122</StateNumber>
+      <SequenceId>17153</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="285" parent="275" name="menu_category_id">
@@ -4402,31 +4402,32 @@ false Zulu
       <DefaultExpression>nextval(&apos;dish_menu_category_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1029</StateNumber>
-      <SequenceId>17077</SequenceId>
+      <StateNumber>1122</StateNumber>
+      <SequenceId>17154</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="286" parent="275" name="name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="287" parent="275" name="cost">
       <DasType>numeric|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <foreign-key id="288" parent="275" name="dish_restaurant_id_fkey">
       <ColNames>restaurant_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17088</ObjectId>
+      <ObjectId>17165</ObjectId>
+      <OnDelete>set-null</OnDelete>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <RefTableId>17042</RefTableId>
       <RefTableName>restaurant</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4434,10 +4435,11 @@ false Zulu
     <foreign-key id="289" parent="275" name="dish_menu_category_id_fkey">
       <ColNames>menu_category_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17093</ObjectId>
+      <ObjectId>17170</ObjectId>
+      <OnDelete>set-null</OnDelete>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <RefTableId>17069</RefTableId>
       <RefTableName>menu_category</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4445,18 +4447,18 @@ false Zulu
     <index id="290" parent="275" name="dish_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17086</ObjectId>
+      <ObjectId>17163</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1029</StateNumber>
+      <StateNumber>1122</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="291" parent="275" name="dish_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17087</ObjectId>
+      <ObjectId>17164</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1029</StateNumber>
-      <UnderlyingIndexId>17086</UnderlyingIndexId>
+      <StateNumber>1122</StateNumber>
+      <UnderlyingIndexId>17163</UnderlyingIndexId>
     </key>
     <column id="292" parent="276" name="id">
       <DasType>bigint|0s</DasType>

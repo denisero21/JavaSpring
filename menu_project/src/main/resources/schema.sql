@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS dish (
   menu_category_id BIGSERIAL,
   name varchar(255) NOT NULL,
   cost decimal NOT NULL,
-  FOREIGN KEY (restaurant_id) REFERENCES restaurant (id),
-    FOREIGN KEY (menu_category_id) REFERENCES menu_category (id)
+  FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE SET NULL,
+    FOREIGN KEY (menu_category_id) REFERENCES menu_category (id) ON DELETE SET NULL
 );
 

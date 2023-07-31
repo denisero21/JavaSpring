@@ -1,0 +1,14 @@
+{
+  "id": 6,
+  "name": "Roy Kent updated",
+  "mail": "roykent@tedlasso.com",
+  "password": "royroyroy",
+  "creationDate": "2023-07-31T09:13:41.3258496",
+  "roles": [
+    {
+      "id": 2,
+      "name": "GUEST",
+      "rolePrivileges": []
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-07-31T07:19:55.943+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/menu_categories/delete/1"
+}

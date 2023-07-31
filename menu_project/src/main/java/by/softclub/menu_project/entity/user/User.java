@@ -36,9 +36,9 @@ public class User {
 
     private LocalDateTime creationDate;
 
-    @OneToMany(mappedBy = "user")
-    @JsonIgnore
-    private List<Order> orders;
+//    @OneToMany(mappedBy = "user")
+//    @JsonIgnore
+//    private List<Order> orders;
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",

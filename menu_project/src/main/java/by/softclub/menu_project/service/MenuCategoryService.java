@@ -1,5 +1,6 @@
 package by.softclub.menu_project.service;
 
+import by.softclub.menu_project.entity.Dish;
 import by.softclub.menu_project.entity.MenuCategory;
 import by.softclub.menu_project.entity.dto.MenuCategoryDto;
 import by.softclub.menu_project.repository.DishRepository;
@@ -20,6 +21,8 @@ public class MenuCategoryService {
     public void addMenuCategory(MenuCategoryDto menuCategoryDto){
         MenuCategory menuCategory = new MenuCategory();
         BeanUtils.copyProperties(menuCategoryDto, menuCategory);
+        List<Dish> dishes = dishRepository.findAllByIds(menuCategoryDto.getDishes());
+        menuCategory.setDishes(dishes);
         menuCategoryRepository.save(menuCategory);
     }
 

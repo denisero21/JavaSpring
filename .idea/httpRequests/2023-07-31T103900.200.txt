@@ -1,0 +1,1 @@
+Dish with ID 2 has been deleted.

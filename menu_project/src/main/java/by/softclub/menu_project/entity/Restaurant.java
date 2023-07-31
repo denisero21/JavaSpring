@@ -1,5 +1,6 @@
 package by.softclub.menu_project.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import lombok.*;
@@ -31,5 +32,6 @@ public class Restaurant {
     private String info;
 
     @OneToMany(mappedBy = "restaurant")
+    @JsonIgnore
     private List<Dish> dishes;
 }

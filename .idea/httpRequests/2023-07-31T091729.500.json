@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-07-31T06:17:29.041+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/restaurants/get/all"
+}
