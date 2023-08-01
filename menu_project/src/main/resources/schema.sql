@@ -50,17 +50,49 @@ CREATE TABLE IF NOT EXISTS restaurant (
 CREATE TABLE IF NOT EXISTS menu_category (
  id BIGSERIAL PRIMARY KEY,
  name varchar(255) NOT NULL,
- restaurant_id BIGSERIAL,
- FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE SET NULL
+ restaurant_id BIGSERIAL NOT NULL,
+ FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS dish (
   id BIGSERIAL PRIMARY KEY,
-  restaurant_id BIGSERIAL,
-  menu_category_id BIGSERIAL,
+  restaurant_id BIGSERIAL NOT NULL,
+  menu_category_id BIGSERIAL NOT NULL,
   name varchar(255) NOT NULL,
   cost decimal NOT NULL,
-  FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE SET NULL,
-    FOREIGN KEY (menu_category_id) REFERENCES menu_category (id) ON DELETE SET NULL
+  FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE CASCADE,
+    FOREIGN KEY (menu_category_id) REFERENCES menu_category (id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS order_ (
+    id BIGSERIAL PRIMARY KEY,
+    date TIMESTAMP DEFAULT now() NOT NULL,
+    cost decimal NOT NULL,
+    status serial NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS restaurant_table(
+    id BIGSERIAL PRIMARY KEY,
+    restaurant_id bigserial,
+    number serial NOT NULL,
+    seats serial NOT NULL,
+    free boolean NOT NULL,
+    FOREIGN KEY (restaurant_id) REFERENCES restaurant (id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS reservation(
+    id bigserial primary key,
+    date timestamp not null,
+    guests serial not null,
+    status serial not null,
+    user_id bigserial not null,
+    foreign key (user_id) references user_ (id) on delete cascade
+);
+
+create table if not exists restaurant_table_reservation(
+    restaurant_table_id bigserial not null,
+    reservation_id bigserial not null,
+    foreign key (restaurant_table_id) references restaurant_table (id) on delete cascade,
+    foreign key (reservation_id) references  reservation (id) on delete cascade
 );
 

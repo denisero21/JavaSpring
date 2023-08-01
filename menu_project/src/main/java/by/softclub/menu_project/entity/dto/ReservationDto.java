@@ -3,13 +3,13 @@ package by.softclub.menu_project.entity.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.Set;
-
 @Data
 @AllArgsConstructor
-public class RoleDto {
+public class ReservationDto {
 
-    private String name;
+    private Integer guestsNumber;
 
-    Set<Long> rolePrivileges;
+    private int status;
+
+    private Long user;
 }

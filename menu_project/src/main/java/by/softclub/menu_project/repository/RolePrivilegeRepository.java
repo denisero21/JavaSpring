@@ -1,6 +1,5 @@
 package by.softclub.menu_project.repository;
 
-import by.softclub.menu_project.entity.user.Role;
 import by.softclub.menu_project.entity.user.RolePrivilege;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

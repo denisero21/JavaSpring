@@ -1,12 +1,11 @@
 package by.softclub.menu_project.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
 
 @Entity
 @Getter
@@ -30,6 +29,8 @@ public class RestaurantTable {
     @Column(name = "free")
     private Boolean isFree;
 
-    @OneToMany(mappedBy = "table")
-    private List<Reservation> reservations;
+    @ManyToOne
+    @JoinColumn(name = "restaurant_id")
+    @JsonBackReference
+    private Restaurant restaurant;
 }

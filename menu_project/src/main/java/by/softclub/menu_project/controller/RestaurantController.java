@@ -1,7 +1,6 @@
 package by.softclub.menu_project.controller;
 
 import by.softclub.menu_project.entity.Restaurant;
-
 import by.softclub.menu_project.entity.dto.RestaurantDto;
 import by.softclub.menu_project.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/restaurants")

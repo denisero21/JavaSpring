@@ -1,18 +1,16 @@
 package by.softclub.menu_project.controller;
 
+import by.softclub.menu_project.entity.Dish;
 import by.softclub.menu_project.entity.dto.DishDto;
 import by.softclub.menu_project.service.DishService;
 import by.softclub.menu_project.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.aop.scope.ScopedProxyUtils;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import by.softclub.menu_project.entity.Dish;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/dishes")

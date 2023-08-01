@@ -1,8 +1,6 @@
 package by.softclub.menu_project.controller;
 
-import by.softclub.menu_project.entity.dto.RoleDto;
 import by.softclub.menu_project.entity.dto.RolePrivilegeDto;
-import by.softclub.menu_project.entity.user.Role;
 import by.softclub.menu_project.entity.user.RolePrivilege;
 import by.softclub.menu_project.service.RolePrivilegeService;
 import lombok.RequiredArgsConstructor;

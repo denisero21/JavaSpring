@@ -1,14 +1,12 @@
 package by.softclub.menu_project.entity;
 
-import by.softclub.menu_project.entity.user.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Getter
@@ -26,11 +24,9 @@ public class Order {
     @Column(name = "date")
     private LocalDateTime date;
 
-    @Column(name = "status")
-    private String status;
-
     @Column(name = "cost")
-    private Integer cost;
-    
+    private Double cost;
 
+    @Column(name = "status")
+    private OrderStatus status;
 }

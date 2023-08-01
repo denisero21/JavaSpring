@@ -9,12 +9,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "reservation")
 public class Reservation {
 
     @Id
@@ -29,13 +31,17 @@ public class Reservation {
     private Integer guestsNumber;
 
     @Column(name = "status")
-    private String status;
+    private ReservationStatus status;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonIgnore
     private User user;
 
-    @ManyToOne
-    private RestaurantTable table;
+    @ManyToMany
+    @JoinTable(
+            name = "restaurant_table_reservation",
+            joinColumns = @JoinColumn(name = "reservation_id"),
+            inverseJoinColumns = @JoinColumn(name = "restaurant_table_id"))
+    private List<RestaurantTable> restaurantTables;
 }

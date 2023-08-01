@@ -1,19 +1,15 @@
 package by.softclub.menu_project.service;
 
 import by.softclub.menu_project.entity.Dish;
-import by.softclub.menu_project.entity.Restaurant;
 import by.softclub.menu_project.entity.dto.DishDto;
 import by.softclub.menu_project.repository.DishRepository;
 import by.softclub.menu_project.repository.MenuCategoryRepository;
 import by.softclub.menu_project.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

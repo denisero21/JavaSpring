@@ -3,15 +3,15 @@ package by.softclub.menu_project.entity.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
-public class DishDto {
+public class OrderDto {
 
-    private Long restaurant;
-
-    private String name;
+    private LocalDateTime date;
 
     private Double cost;
 
-    private Long menuCategory;
+    private int status;
 }
