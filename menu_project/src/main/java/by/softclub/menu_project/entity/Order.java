@@ -1,5 +1,7 @@
 package by.softclub.menu_project.entity;
 
+import by.softclub.menu_project.entity.user.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -29,4 +32,17 @@ public class Order {
 
     @Column(name = "status")
     private OrderStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToMany
+    @JoinTable(
+            name = "order_dish",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "dish_id"))
+    private List<Dish> dishes;
+
+
 }

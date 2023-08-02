@@ -68,7 +68,16 @@ CREATE TABLE IF NOT EXISTS order_ (
     id BIGSERIAL PRIMARY KEY,
     date TIMESTAMP DEFAULT now() NOT NULL,
     cost decimal NOT NULL,
-    status serial NOT NULL
+    status serial NOT NULL,
+    user_id bigserial not null,
+    foreign key (user_id) references user_ (id) on delete cascade
+);
+
+create table if not exists order_dish(
+order_id bigserial not null,
+dish_id bigserial not null,
+foreign key (order_id) references order_ (id) on delete cascade,
+foreign key (dish_id) references dish (id) on delete cascade
 );
 
 CREATE TABLE IF NOT EXISTS restaurant_table(
@@ -82,7 +91,7 @@ CREATE TABLE IF NOT EXISTS restaurant_table(
 
 CREATE TABLE IF NOT EXISTS reservation(
     id bigserial primary key,
-    date timestamp not null,
+    date timestamp DEFAULT now() not null,
     guests serial not null,
     status serial not null,
     user_id bigserial not null,

@@ -64,7 +64,7 @@ Content-Type: application/json
 
 {
 "name": "Arto",
-"mail": "artokovalsen@gmail.com",
+"mail": "artokovalsen@gmail1.com",
 "password": "crazzy14",
   "roles": [1]
 }
@@ -87,7 +87,7 @@ Content-Type: application/json
 }
 
 ### delete user
-DELETE http://localhost:8080/users/delete/9
+DELETE http://localhost:8080/users/delete/13
 
 
 
@@ -192,3 +192,36 @@ Content-Type: application/json
 ### delete dish
 DELETE http://localhost:8080/dishes/delete/5
 
+
+
+
+
+
+### add order
+POST http://localhost:8080/orders/add
+Content-Type: application/json
+
+{
+  "user": 6,
+  "status": 1,
+  "dishes": [1, 2]
+}
+
+### get order
+GET http://localhost:8080/orders/get/2
+
+### get all order
+GET http://localhost:8080/orders/get/all
+
+### update order
+PUT http://localhost:8080/orders/update/2
+Content-Type: application/json
+
+{
+  "user": 6,
+  "status": 2,
+  "dishes": [1, 2]
+}
+
+### delete orders
+DELETE http://localhost:8080/orders/delete/1

@@ -2,6 +2,7 @@ package by.softclub.menu_project.entity.user;
 
 import by.softclub.menu_project.entity.Order;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -36,9 +37,9 @@ public class User {
 
     private LocalDateTime creationDate;
 
-//    @OneToMany(mappedBy = "user")
-//    @JsonIgnore
-//    private List<Order> orders;
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Order> orders;
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",

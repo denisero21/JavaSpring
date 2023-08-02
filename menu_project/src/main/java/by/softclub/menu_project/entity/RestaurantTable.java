@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -33,4 +35,7 @@ public class RestaurantTable {
     @JoinColumn(name = "restaurant_id")
     @JsonBackReference
     private Restaurant restaurant;
+
+    @ManyToMany(mappedBy = "restaurantTables")
+    private List<Reservation> reservations;
 }

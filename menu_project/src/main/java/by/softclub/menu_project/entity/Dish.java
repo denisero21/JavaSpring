@@ -1,11 +1,14 @@
 package by.softclub.menu_project.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -34,5 +37,9 @@ public class Dish {
     @ManyToOne
     @JoinColumn(name = "menu_category_id")
     private MenuCategory menuCategory;
+
+    @ManyToMany(mappedBy = "dishes")
+    @JsonIgnore
+    private List<Order> orders;
 
 }
