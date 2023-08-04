@@ -5,25 +5,42 @@ import by.softclub.menu_project.entity.user.Role;
 import by.softclub.menu_project.entity.user.User;
 import by.softclub.menu_project.repository.RoleRepository;
 import by.softclub.menu_project.repository.UserRepository;
-import com.fasterxml.jackson.databind.util.BeanUtil;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
+@Slf4j
+public class UserService implements UserDetailsService {
+
     private final UserRepository userRepository;
+    
     private final RoleRepository roleRepository;
+
+    @Autowired
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+
 
     public void add(UserDto userDto){
         User newUser = new User();
-        BeanUtils.copyProperties(userDto, newUser, "roles");
+        BeanUtils.copyProperties(userDto, newUser, "roles", "password");
+        newUser.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         newUser.setCreationDate(LocalDateTime.now());
         newUser.setRoles(roles);
@@ -50,5 +67,24 @@ public class UserService {
 
     public void delete(Long id){
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        User user = userRepository.findByEmail(email);
+
+        if (user == null) {
+            log.info("User with email " + email + " not found...");
+            throw new UsernameNotFoundException("");
+        } else {
+            return new org.springframework.security.core.userdetails.User(
+                    user.getEmail(),
+                    user.getPassword(),
+                    true,
+                    true,
+                    true,
+                    true,
+                    user.getRoles());
+        }
     }
 }

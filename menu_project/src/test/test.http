@@ -63,8 +63,8 @@ POST http://localhost:8080/users/add
 Content-Type: application/json
 
 {
-"name": "Arto",
-"mail": "artokovalsen@gmail1.com",
+"name": "Admin",
+"mail": "admin",
 "password": "crazzy14",
   "roles": [1]
 }
