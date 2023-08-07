@@ -25,8 +25,7 @@ import java.util.Set;
 @Service
 @RequiredArgsConstructor
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-@Slf4j
-public class UserService implements UserDetailsService {
+public class UserService{
 
     private final UserRepository userRepository;
     
@@ -57,7 +56,7 @@ public class UserService implements UserDetailsService {
 
     public User update(UserDto userDto, Long id){
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-        BeanUtils.copyProperties(userDto, user, "roles");
+        BeanUtils.copyProperties(userDto, user, "roles", "password");
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setRoles(roles);
         user.setCreationDate(LocalDateTime.now());
@@ -69,22 +68,5 @@ public class UserService implements UserDetailsService {
         userRepository.deleteById(id);
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userRepository.findByEmail(email);
 
-        if (user == null) {
-            log.info("User with email " + email + " not found...");
-            throw new UsernameNotFoundException("");
-        } else {
-            return new org.springframework.security.core.userdetails.User(
-                    user.getEmail(),
-                    user.getPassword(),
-                    true,
-                    true,
-                    true,
-                    true,
-                    user.getRoles());
-        }
-    }
 }

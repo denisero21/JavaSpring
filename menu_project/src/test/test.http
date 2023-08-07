@@ -63,10 +63,10 @@ POST http://localhost:8080/users/add
 Content-Type: application/json
 
 {
-"name": "Admin",
-"mail": "admin",
-"password": "crazzy14",
-  "roles": [1]
+"name": "user",
+"mail": "user",
+"password": "userpassword",
+  "roles": [5]
 }
 
 ### get user
@@ -76,14 +76,14 @@ GET http://localhost:8080/users/get/6
 GET http://localhost:8080/users/get/all
 
 ### update user
-PUT http://localhost:8080/users/update/11
+PUT http://localhost:8080/users/update/14
 Content-Type: application/json
 
 {
-  "name": "Arto",
-  "mail": "artokovalsen@gmail.com",
+  "name": "admin",
+  "mail": "admin",
   "password": "crazzy14",
-  "roles": [5]
+  "roles": [1]
 }
 
 ### delete user
