@@ -37,31 +37,14 @@ public class SecurityConfig{
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((request) -> request
-                .requestMatchers("/login").permitAll()
-                .requestMatchers(PUT, "/**").hasAnyAuthority("ROLE_ADMIN")
+                .requestMatchers(PUT, "/**").hasAuthority("USER_LOGIN")
                 .requestMatchers("/**").permitAll()
-                .anyRequest().authenticated()
         );
         http.authenticationManager(authenticationManager());
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         return http.build();
     }
-
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        UserDetails user =
-//                User.builder()
-//                        .username("admin")
-//                        .password(passwordEncoder().encode("password"))
-//                        .roles("ADMIN")
-//                        .authorities("ROLE_ADMIN")
-//                        .build();
-//
-//        System.out.println(">>>      user: " + user.getUsername() + ", password: " + user.getPassword() + ", role: " + user.getAuthorities());
-//
-//        return new InMemoryUserDetailsManager(user);
-//    }
 
 
     @Bean

@@ -16,7 +16,7 @@ public class AuthController {
     @Autowired
     private final AuthService authService;
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<Authentication> getUser(@RequestBody String email){
         Authentication user = authService.findByEmail(email);
         return ResponseEntity.ok(user);

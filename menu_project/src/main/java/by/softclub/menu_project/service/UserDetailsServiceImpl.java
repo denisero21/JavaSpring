@@ -35,7 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                     true,
                     true,
                     true,
-                    user.getRoles());
+                    getAuthorities(user));
         }
     }
 
