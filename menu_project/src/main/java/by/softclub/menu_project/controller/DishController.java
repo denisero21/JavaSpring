@@ -5,6 +5,7 @@ import by.softclub.menu_project.entity.dto.DishDto;
 import by.softclub.menu_project.service.DishService;
 import by.softclub.menu_project.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

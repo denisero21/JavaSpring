@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -36,6 +37,7 @@ public class SecurityConfig{
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((request) -> request
+                .requestMatchers("/login").permitAll()
                 .requestMatchers(PUT, "/**").hasAnyAuthority("ROLE_ADMIN")
                 .requestMatchers("/**").permitAll()
                 .anyRequest().authenticated()
@@ -46,20 +48,20 @@ public class SecurityConfig{
         return http.build();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails user =
-                User.builder()
-                        .username("admin")
-                        .password(passwordEncoder().encode("password"))
-                        .roles("ADMIN")
-                        .authorities("ROLE_ADMIN")
-                        .build();
-
-        System.out.println(">>>      user: " + user.getUsername() + ", password: " + user.getPassword() + ", role: " + user.getAuthorities());
-
-        return new InMemoryUserDetailsManager(user);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        UserDetails user =
+//                User.builder()
+//                        .username("admin")
+//                        .password(passwordEncoder().encode("password"))
+//                        .roles("ADMIN")
+//                        .authorities("ROLE_ADMIN")
+//                        .build();
+//
+//        System.out.println(">>>      user: " + user.getUsername() + ", password: " + user.getPassword() + ", role: " + user.getAuthorities());
+//
+//        return new InMemoryUserDetailsManager(user);
+//    }
 
 
     @Bean
@@ -74,6 +76,11 @@ public class SecurityConfig{
         authenticationProvider.setPasswordEncoder(passwordEncoder());
         return new ProviderManager(authenticationProvider);
     }
+
+    public void configure(AuthenticationManagerBuilder auth) throws Exception{
+        auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
+    }
+
 
 
 }

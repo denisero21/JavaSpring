@@ -6,20 +6,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 public class AuthController {
 
     @Autowired
     private final AuthService authService;
 
-    @GetMapping
+    @GetMapping("/login")
     public ResponseEntity<Authentication> getUser(@RequestBody String email){
         Authentication user = authService.findByEmail(email);
         return ResponseEntity.ok(user);
