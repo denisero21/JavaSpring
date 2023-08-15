@@ -1,0 +1,25 @@
+<div th:switch="${restaurants}">
+  <h2 th:case="null">No restaurants yet!</h2>
+  <div th:case="*">
+    <h2>Users</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>dishes</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="rest : ${restaurants}">
+        <td th:text="${rest.name}"></td>
+        <td th:text="${rest.dishes}"></td>
+        <td><a th:href="@{/update/{id}(id=${rest.id})}">Edit</a></td>
+        <td><a th:href="@{/delete/{id}(id=${rest.id})}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/signup">Add a new user</a></p>
+</div>
