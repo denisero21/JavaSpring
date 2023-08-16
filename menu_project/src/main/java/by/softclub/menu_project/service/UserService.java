@@ -31,8 +31,8 @@ public class UserService{
     
     private final RoleRepository roleRepository;
 
-    @Autowired
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+//    @Autowired
+//    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
 
@@ -65,7 +65,7 @@ public class UserService{
 
     public void convertDtoToObject(UserDto userDto, User user){
         BeanUtils.copyProperties(userDto, user, "roles", "password");
-        user.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
+//        user.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setCreationDate(LocalDateTime.now());
         user.setRoles(roles);
