@@ -21,10 +21,9 @@ public class MenuCategoryService {
 
     public void add(MenuCategoryDto menuCategoryDto){
         MenuCategory menuCategory = new MenuCategory();
-        BeanUtils.copyProperties(menuCategoryDto, menuCategory);
+        convertDtoToObject(menuCategoryDto, menuCategory);
         List<Dish> dishes = dishRepository.findAllByIds(menuCategoryDto.getDishes());
         menuCategory.setDishes(dishes);
-        menuCategory.setRestaurant(restaurantService.getById(menuCategoryDto.getRestaurant()));
         menuCategoryRepository.save(menuCategory);
     }
 
@@ -40,14 +39,18 @@ public class MenuCategoryService {
     public MenuCategory update(MenuCategoryDto menuCategoryDto, Long id){
         MenuCategory menuCategory = menuCategoryRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Menu category not found"));
-        BeanUtils.copyProperties(menuCategoryDto, menuCategory, "dishes");
-        menuCategory.setRestaurant(restaurantService.getById(menuCategoryDto.getRestaurant()));
+        convertDtoToObject(menuCategoryDto, menuCategory);
         menuCategoryRepository.save(menuCategory);
         return menuCategory;
     }
 
     public void delete(Long id){
         menuCategoryRepository.deleteById(id);
+    }
+
+    public void convertDtoToObject(MenuCategoryDto menuCategoryDto, MenuCategory menuCategory){
+        BeanUtils.copyProperties(menuCategoryDto, menuCategory, "dishes");
+        menuCategory.setRestaurant(restaurantService.getById(menuCategoryDto.getRestaurant()));
     }
 
 }

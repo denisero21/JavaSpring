@@ -21,11 +21,7 @@ public class DishService {
 
     public void add(DishDto dishDto) {
         Dish dish = new Dish();
-        BeanUtils.copyProperties(dishDto, dish, "restaurant", "menuCategory");
-        dish.setRestaurant(restaurantRepository.findById(dishDto.getRestaurant())
-                .orElseThrow(() -> new RuntimeException("Restaurant not found")));
-        dish.setMenuCategory(menuCategoryRepository.findById(dishDto.getMenuCategory())
-                .orElseThrow(() -> new RuntimeException("Menu category not found")));
+        convertDtoToObject(dishDto, dish);
         dishRepository.save(dish);
     }
 
@@ -42,16 +38,20 @@ public class DishService {
     public Dish update(DishDto dishDto, Long id){
         Dish dish = dishRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Dish not found"));
-        BeanUtils.copyProperties(dishDto, dish, "restaurant", "menuCategory");
-        dish.setRestaurant(restaurantRepository.findById(dishDto.getRestaurant())
-                .orElseThrow(() -> new RuntimeException("Restaurant not found")));
-        dish.setMenuCategory(menuCategoryRepository.findById(dishDto.getMenuCategory())
-                .orElseThrow(() -> new RuntimeException("Menu category not found")));
+        convertDtoToObject(dishDto, dish);
         dishRepository.save(dish);
         return dish;
     }
 
     public void delete(Long restId) {
         dishRepository.deleteById(restId);
+    }
+
+    public void convertDtoToObject(DishDto dishDto, Dish dish){
+        BeanUtils.copyProperties(dishDto, dish, "restaurant", "menuCategory");
+        dish.setRestaurant(restaurantRepository.findById(dishDto.getRestaurant())
+                .orElseThrow(() -> new RuntimeException("Restaurant not found")));
+        dish.setMenuCategory(menuCategoryRepository.findById(dishDto.getMenuCategory())
+                .orElseThrow(() -> new RuntimeException("Menu category not found")));
     }
 }

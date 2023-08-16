@@ -20,4 +20,6 @@ public class RestaurantDto {
     private List<Long> dishes;
 
     private List<Long> menuCategories;
+
+    private List<Long> restaurantTables;
 }

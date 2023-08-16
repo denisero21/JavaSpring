@@ -16,7 +16,7 @@ public class RolePrivilegeService {
 
     public void add(RolePrivilegeDto rolePrivilegeDto){
         RolePrivilege rolePrivilege = new RolePrivilege();
-        BeanUtils.copyProperties(rolePrivilegeDto, rolePrivilege);
+        convertDtoToObject(rolePrivilegeDto, rolePrivilege);
         rolePrivilegeRepository.save(rolePrivilege);
     }
 
@@ -32,13 +32,17 @@ public class RolePrivilegeService {
     public RolePrivilege update(RolePrivilegeDto rolePrivilegeDto, Long id){
         RolePrivilege rolePrivilege = rolePrivilegeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Privilege not found"));
-        BeanUtils.copyProperties(rolePrivilegeDto, rolePrivilege);
+        convertDtoToObject(rolePrivilegeDto, rolePrivilege);
         rolePrivilegeRepository.save(rolePrivilege);
         return rolePrivilege;
     }
 
     public void delete(Long id){
         rolePrivilegeRepository.deleteById(id);
+    }
+
+    public void convertDtoToObject(RolePrivilegeDto rolePrivilegeDto, RolePrivilege rolePrivilege){
+        BeanUtils.copyProperties(rolePrivilegeDto, rolePrivilege);
     }
 
 }

@@ -37,17 +37,14 @@ public class UserService{
 
 
     public void add(UserDto userDto){
-        User newUser = new User();
-        BeanUtils.copyProperties(userDto, newUser, "roles", "password");
-        newUser.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
-        Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
-        newUser.setCreationDate(LocalDateTime.now());
-        newUser.setRoles(roles);
-        userRepository.save(newUser);
+        User user = new User();
+        convertDtoToObject(userDto, user);
+        userRepository.save(user);
     }
 
     public User getById(Long id){
-        return userRepository.findById(id).orElseThrow(() ->  new RuntimeException("User not found"));
+        return userRepository.findById(id)
+                .orElseThrow(() ->  new RuntimeException("User not found"));
     }
 
     public List<User> getAll(){
@@ -55,11 +52,9 @@ public class UserService{
     }
 
     public User update(UserDto userDto, Long id){
-        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-        BeanUtils.copyProperties(userDto, user, "roles", "password");
-        Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
-        user.setRoles(roles);
-        user.setCreationDate(LocalDateTime.now());
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        convertDtoToObject(userDto, user);
         userRepository.save(user);
         return user;
     }
@@ -68,5 +63,11 @@ public class UserService{
         userRepository.deleteById(id);
     }
 
-
+    public void convertDtoToObject(UserDto userDto, User user){
+        BeanUtils.copyProperties(userDto, user, "roles", "password");
+        user.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
+        Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
+        user.setCreationDate(LocalDateTime.now());
+        user.setRoles(roles);
+    }
 }

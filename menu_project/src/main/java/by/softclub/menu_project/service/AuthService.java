@@ -28,7 +28,8 @@ public class AuthService {
             throw new RuntimeException("User not found");
         }
         else return authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(user.getEmail(),
+                new UsernamePasswordAuthenticationToken(
+                        user.getEmail(),
                         user.getPassword(),
                         new ArrayList<>())
         );

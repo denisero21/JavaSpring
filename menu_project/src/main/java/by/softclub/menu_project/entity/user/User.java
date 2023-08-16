@@ -1,6 +1,7 @@
 package by.softclub.menu_project.entity.user;
 
 import by.softclub.menu_project.entity.Order;
+import by.softclub.menu_project.entity.Payment;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -42,8 +43,9 @@ public class User {
     private List<Order> orders;
 
     @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_role",
+    @JoinTable(
+            name = "user_role",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
-    Set<Role> roles;
+    private Set<Role> roles;
 }

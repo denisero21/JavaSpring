@@ -44,5 +44,8 @@ public class Order {
             inverseJoinColumns = @JoinColumn(name = "dish_id"))
     private List<Dish> dishes;
 
+    @OneToMany(mappedBy = "order")
+    private List<Payment> payments;
+
 
 }
