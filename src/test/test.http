@@ -1,3 +1,31 @@
+### ACTUATOR
+GET http://localhost:8080/actuator/health
+###
+GET http://localhost:8080/actuator/env
+###
+GET http://localhost:8080/actuator/info
+###
+GET http://localhost:8080/actuator/beans
+###
+GET http://localhost:8080/actuator/conditions
+###
+GET http://localhost:8080/actuator/configprops
+###
+GET http://localhost:8080/actuator/heapdump
+###
+GET http://localhost:8080/actuator/loggers
+###
+GET http://localhost:8080/actuator/mappings
+###
+GET http://localhost:8080/actuator/metrics
+###
+GET http://localhost:8080/actuator/threaddump
+
+
+
+
+
+
 ### add privilege
 POST http://localhost:8080/privilege/add
 Content-Type: application/json
@@ -231,3 +259,5 @@ Content-Type: application/json
 
 ### delete orders
 DELETE http://localhost:8080/orders/delete/1
+
+
