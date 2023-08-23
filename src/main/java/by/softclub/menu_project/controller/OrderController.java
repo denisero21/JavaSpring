@@ -2,6 +2,7 @@ package by.softclub.menu_project.controller;
 
 import by.softclub.menu_project.entity.Order;
 import by.softclub.menu_project.entity.dto.OrderDto;
+import by.softclub.menu_project.entity.dto.OrderStatusDto;
 import by.softclub.menu_project.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +36,11 @@ public class OrderController {
     @PutMapping("/update/{id}")
     public ResponseEntity<Order> updateOrder(@RequestBody OrderDto orderDto, @PathVariable("id") Long id){
         return ResponseEntity.ok(orderService.update(orderDto, id));
+    }
+
+    @PutMapping("/update/status/{id}")
+    public ResponseEntity<Order> updateOrderStatus(@RequestBody OrderStatusDto orderStatusDto, @PathVariable("id") Long id){
+        return ResponseEntity.ok(orderService.updateStatus(orderStatusDto, id));
     }
 
     @DeleteMapping("/delete/{id}")
