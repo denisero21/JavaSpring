@@ -23,10 +23,10 @@ public class RestaurantTable {
     private Long id;
 
     @Column(name = "number")
-    private Integer tableNumber;
+    private int tableNumber;
 
     @Column(name = "seats")
-    private Integer seatsNumber;
+    private int seatsNumber;
 
     @Column(name = "free")
     private Boolean isFree;

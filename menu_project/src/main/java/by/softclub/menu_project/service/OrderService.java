@@ -4,6 +4,7 @@ import by.softclub.menu_project.entity.Dish;
 import by.softclub.menu_project.entity.Order;
 import by.softclub.menu_project.entity.OrderStatus;
 import by.softclub.menu_project.entity.dto.OrderDto;
+import by.softclub.menu_project.entity.dto.OrderStatusDto;
 import by.softclub.menu_project.entity.user.User;
 import by.softclub.menu_project.repository.DishRepository;
 import by.softclub.menu_project.repository.OrderRepository;
@@ -42,6 +43,19 @@ public class OrderService {
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Order not found"));
         convertDtoToObject(orderDto, order);
+        orderRepository.save(order);
+        return order;
+    }
+
+    public Order updateStatus(OrderStatusDto orderStatusDto, Long id){
+        Order order = orderRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+        for(OrderStatus status: OrderStatus.values()){
+            if (status.getCode() == orderStatusDto.getStatus()){
+                order.setStatus(status);
+                break;
+            }
+        }
         orderRepository.save(order);
         return order;
     }

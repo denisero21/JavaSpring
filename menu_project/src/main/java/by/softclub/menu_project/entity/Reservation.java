@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -25,10 +26,10 @@ public class Reservation {
     private Long id;
 
     @Column(name = "date")
-    private Date date;
+    private LocalDateTime date;
 
     @Column(name = "guests")
-    private Integer guestsNumber;
+    private int guestsNumber;
 
     @Column(name = "status")
     private ReservationStatus status;

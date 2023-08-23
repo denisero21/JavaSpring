@@ -257,7 +257,47 @@ Content-Type: application/json
   "dishes": [1, 2]
 }
 
+### update order status
+PUT http://localhost:8080/orders/update/status/2
+Content-Type: application/json
+
+{
+  "status": 2
+}
+
 ### delete orders
 DELETE http://localhost:8080/orders/delete/1
 
+
+
+
+
+
+
+### add payment
+POST http://localhost:8080/payments/add
+Content-Type: application/json
+
+{
+  "cost": 24.7,
+  "order": 2
+}
+
+### get payment
+GET http://localhost:8080/payments/get/1
+
+### get all payments
+GET http://localhost:8080/payments/get/all
+
+### update payment
+PUT http://localhost:8080/payments/add
+Content-Type: application/json
+
+{
+  "cost": 24.7,
+  "order": 2
+}
+
+### delete payment
+DELETE http://localhost:8080/payments/delete/1
 
