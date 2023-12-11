@@ -5,13 +5,15 @@ import by.softclub.menu_project.entity.dto.OrderDto;
 import by.softclub.menu_project.entity.dto.OrderStatusDto;
 import by.softclub.menu_project.service.OrderService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/orders")
+@RequestMapping(value = "/orders",
+                produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
 public class OrderController {
 

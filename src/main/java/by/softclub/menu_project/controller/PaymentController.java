@@ -4,13 +4,15 @@ import by.softclub.menu_project.entity.Payment;
 import by.softclub.menu_project.entity.dto.PaymentDto;
 import by.softclub.menu_project.service.PaymentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/payments")
+@RequestMapping(value = "/payments",
+        produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
 public class PaymentController {
     private final PaymentService paymentService;

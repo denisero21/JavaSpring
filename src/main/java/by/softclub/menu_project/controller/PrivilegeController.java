@@ -4,6 +4,7 @@ import by.softclub.menu_project.entity.dto.RolePrivilegeDto;
 import by.softclub.menu_project.entity.user.RolePrivilege;
 import by.softclub.menu_project.service.RolePrivilegeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,8 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/privilege")
+@RequestMapping(value = "/privilege",
+        produces = MediaType.APPLICATION_JSON_VALUE)
 public class PrivilegeController {
 
     private final RolePrivilegeService rolePrivilegeService;
