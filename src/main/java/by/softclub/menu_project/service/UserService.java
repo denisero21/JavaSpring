@@ -6,16 +6,9 @@ import by.softclub.menu_project.entity.user.User;
 import by.softclub.menu_project.repository.RoleRepository;
 import by.softclub.menu_project.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -30,10 +23,6 @@ public class UserService{
     private final UserRepository userRepository;
     
     private final RoleRepository roleRepository;
-
-//    @Autowired
-//    private final BCryptPasswordEncoder bCryptPasswordEncoder;
-
 
 
     public void add(UserDto userDto){
@@ -65,7 +54,6 @@ public class UserService{
 
     public void convertDtoToObject(UserDto userDto, User user){
         BeanUtils.copyProperties(userDto, user, "roles", "password");
-//        user.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setCreationDate(LocalDateTime.now());
         user.setRoles(roles);

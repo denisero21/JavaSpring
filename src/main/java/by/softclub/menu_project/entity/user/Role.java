@@ -3,7 +3,7 @@ package by.softclub.menu_project.entity.user;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Set;
 
@@ -14,7 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Role implements GrantedAuthority {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,8 +31,8 @@ public class Role implements GrantedAuthority {
     @ToString.Exclude
     Set<RolePrivilege> rolePrivileges;
 
-    @Override
-    public String getAuthority() {
-        return getName();
-    }
+//    @Override
+//    public String getAuthority() {
+//        return getName();
+//    }
 }
