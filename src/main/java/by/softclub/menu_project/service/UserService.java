@@ -54,6 +54,7 @@ public class UserService{
 
     public void convertDtoToObject(UserDto userDto, User user){
         BeanUtils.copyProperties(userDto, user, "roles", "password");
+        user.setPassword(userDto.getPassword());
         Set<Role> roles = roleRepository.findAllByIds(userDto.getRoles());
         user.setCreationDate(LocalDateTime.now());
         user.setRoles(roles);
